@@ -4,9 +4,11 @@
 //Add fotn rub write .rub a - (a,b,c,d - change type font)
 
 //font(name,file,size)
-font('Rubik','Rubik-Regular',400)
+font('Nunito','Nunito-Regular',400)
+font('Nunito','Nunito-Bold',700)
 
-$v-font =  'Roboto', sans-serif
+$v-font =  'Nunito', sans-serif
+
 
 typeSize(fontSm,font)
 	+below(768px)
@@ -34,37 +36,41 @@ font-size 40px
 	typeSize(12,10)
 
 .type--sm
-	typeSize(14,12)
+	typeSize(12,12)
 
 .type--main
-	typeSize(16,14)
+	typeSize(15,14)
 
 .type--md
-	typeSize(18,15)
+	typeSize(18,18)
 
 .type--lg
-	typeSize(26,18)
+	typeSize(24,24)
 
 .type--xl
-	typeSize(36,20)
+	typeSize(36,30)
+
+.type--xxl
+	typeSize(48,36)
 
 .type--bold
 	font-weight bold
 
 h1
-	@extend .type--xl
+	@extend .type--xxl
 h2
-	@extend .type--lg
+	@extend .type--xl
 h3
-	@extend .type--main
+	@extend .type--lg
 h4
-	@extend .type--sm
+	@extend .type--md
 h5
-	@extend .type--xs
+	@extend .type--main
 
 a
 	color $link-color
 	text-decoration: none
+	tr()
 	&:hover
 		color darken($link-color,20)
 	&:visiter

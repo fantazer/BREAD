@@ -13,7 +13,7 @@
 body
 	@extend .type--main
 	font-family $v-font
-	color $main-text-color
+	color $dark
 	line-height 1.2
 	letter-spacing 0.01em
 
@@ -45,5 +45,955 @@ body
 	width 100%
 	margin 0
 	animation:  slideInDown  1s 1 ease-in-out;
-	z-index 10
+	z-index 100
 // animate top menu === end
+
+
+.header
+	height: 90px
+	border-bottom 1px solid $border-color
+	f()
+	align-items: stretch
+	z-index 100
+.header-menu
+	flex(mid)
+	width: 200px
+	border-right 1px solid $border-color
+.header-menu-btn
+	@extend .btn--red
+	@extend .btn--md
+	f()
+	align-items center
+	padding: 12px 20px
+	line-height: 1
+	.icon
+		fill white
+		size 20px
+		margin-right: 10px
+.header-nav
+	padding 0 2vw
+	width: 25%
+	flex(between)
+.header-location
+	f()
+	cp()
+	align-items center
+	.icon
+		size 20px
+		fill $mark
+		margin-right: 10px
+.header-nav__el
+	white-space nowrap
+	margin: 0 5px
+	&:hover
+		color $mark
+.header-logo
+	width: 14vw
+	height: 10vw
+	max-width 270px
+	max-height 195px
+	background: white
+	margin: 0 auto
+	flex(mid)
+	position relative
+	border 1px solid $border-color
+	br(50%)
+	&:before
+		content ''
+		top 0
+		left -2px
+		width: calc(100% + 4px)
+		height: 89px
+		position absolute
+		background: white
+	img
+		z-index 5
+		width: 55%
+.header-contact
+	+below(1560px)
+		padding 0 1vw
+	f()
+	align-items center
+	padding 0 2vw
+	.icon
+		fill $mark
+		size 24px
+		margin-right: 15px
+//.header-contact__info
+
+.header-contact__phone
+	+below(1560px)
+		font-size: 18px
+	@extend .type--lg
+	color $dark
+	white-space nowrap
+	font-weight 700
+	display inline-block
+	margin-bottom: 5px
+	&:hover
+		color $mark
+.header-contact__time
+	+below(1560px)
+		font-size: 12px
+		white-space nowrap
+	color $gray
+	whtie-space nowrap
+.header-auth
+	+below(1560px)
+		padding 0 1vw
+	flex(mid)
+	cp()
+	border-left 1px solid $border-color
+	padding 0 2vw
+
+.header-auth-false
+	f()
+	align-items center
+	.icon
+		size 24px
+		fill $gray
+		margin-right: 15px
+.header-auth-true
+	f()
+	align-items center
+//.hidden
+.user-img
+	size 40px
+	br(5px)
+	bg-full()
+	margin-right: 15px
+//.user-name
+.header-cart
+	+below(1560px)
+		padding 0 1vw
+	f()
+	cp()
+	padding 0 2vw
+	border-left 1px solid $border-color
+	align-items center
+.header-cart__icon
+	.icon
+		size 30px
+		fill $red
+	margin-right: 15px
+.header-cart__val
+	white-space nowrap
+	color $dark
+	@extend .type--md
+.header-cart__items
+	flex(mid)
+	background: $red
+	size 40px
+	color white
+	@extend .type--md
+	br(15px)
+	margin-left: 10px
+	.icon
+		fill white
+
+.header-part
+	f()
+	width calc(50% - 7vw)
+
+.header-part--right
+	justify-content: flex-end
+
+// slide menu
+.slide-block
+	+below(640px)
+		top: 90px //Высота хедера
+	+below(480px)
+		width: 100%
+	position: fixed
+	top 90px
+	width: 360px
+	tr(all)
+	border-right 1px solid $border-color
+	height: calc(100% - 90px)
+	background: white
+.slide-block-wrap
+	overflow-y auto
+	height: 100%
+.slide-menu__list
+	padding: 10%
+.slide-block--left
+	left 0
+	transform translateX(-100%)
+
+.slide-block--right
+	right 0
+	transform translateX(100%)
+
+.slide-block--open
+	transform translateX(0%)
+
+.slide-block--cart
+	border-left 1px solid $border-color
+
+.slide-menu__list-el
+	display: block
+	margin-bottom: 10px
+	tr(all)
+	color $dark
+	@extend .type--md
+	font-weight 700
+	&:hover
+		color red
+.body-fix
+	position: fixed!important
+	overflow-Y: scroll!important
+	width:100%!important
+// slide menu === end
+
+.is-open
+	display none
+
+.slide-block-toggle--open
+	.is-close
+		display none!important
+	.is-open
+		display block!important
+	.header-cart__items
+		span
+			display none
+		.icon
+			size 14px
+
+
+// header basket
+.basket-container
+	//max-height: calc(70vh - 200px)
+	position relative
+	overflow hidden
+	flex-grow 1
+
+.basket
+	f()
+	fl()
+	height: 100%
+.basket__el
+	+below(768px)
+		fw()
+		flex(mid)
+		fl()
+		position: relative
+	display flex!important
+	flex(between)
+	padding: 15px 20px
+	outline none!important
+	border-bottom 1px solid $border-color
+.basket__el-info
+	f()
+	align-items: flex-start
+	width: 100%
+.basket__img
+	+below(768px)
+		margin-right: 0
+		height: 100px
+		width: 100px
+	size 50px
+	br(5px)
+	bg-full()
+	background-size: contain
+	margin-right: 20px
+
+.basket__cont
+	width calc(100% - 70px)
+
+.basket__name
+	@extend .type--md
+	font-weight: 700
+	display block
+	f()
+	margin-bottom: 5px
+
+
+
+.basket__delete
+	margin-left: auto
+	.icon
+		cp()
+		tr(all)
+		size 20px
+		fill $gray
+		margin-left: 5px
+		margin-top: -2px
+		&:hover
+			fill $mark
+
+.basket__descr
+	font-size: 15px
+	line-height: 1.4
+	margin-bottom: 10px
+	color $gray
+
+.basket__el-change
+	flex(between)
+
+.basket__price
+	+below(768px)
+		margin-top: 20px
+		font-size: 20px
+	color $dark
+	white-space nowrap
+	@extend .type--lg
+	font-weight 700
+
+.basket-title
+	@extend .type--lg
+	font-weight 700
+	padding: 20px 0 0 20px
+
+.basket-empty
+	flex-grow 1
+	flex(mid)
+	fl()
+.basket-empty__img
+	margin-bottom: 20px
+.basket-empty__text
+	text-align center
+	width: 80%
+	line-height: 1.6
+	color $gray
+// header basket === end
+
+// incr
+.incr
+	f()
+	//height 40px
+	position relative
+	width 160px
+
+.incr--small
+	width: 80px
+	.incr__nav
+		size 35px
+		.icon
+			size 10px
+	.incr__val
+		width: 25px
+		font-size: 12px
+		font-weight: 700
+
+.incr__nav
+	flex(mid)
+	br(10px)
+	tr()
+	size 35px
+	border 2px solid $mark
+	background white
+	.icon
+		size 12px
+		fill $mark
+	&:hover
+		cp()
+		border-color $mark
+		background: $mark
+		.icon
+			fill white
+	&:active
+		.icon
+			fill $red
+		background-color $mark-light
+.incr__val
+	flex(mid)
+	background white
+	size 40px 35px
+	font-size 20px
+	position relative
+	tr(all)
+	-webkit-touch-callout none
+	-webkit-user-select none
+	-khtml-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+// incr === end
+
+.basket-footer
+	padding: 25px
+	border-top 1px solid $border-color
+	margin-top: auto
+.basket-total
+	flex(between)
+	margin-bottom: 20px
+
+.basket-total__text
+	color $dark
+	@extend .type--lg
+	font-weight 700
+
+.basket-total__val
+	color $dark
+	@extend .type--xl
+	font-weight 700
+
+.basket-total-get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	font-weight: 700
+
+// slider
+
+.slider
+	margin-top: 20px
+.slider__el
+	padding: 0 1%
+	-webkit-touch-callout none
+	-webkit-user-select none
+	-khtml-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	outline none
+.slider__el-img
+	br(20px)
+	overflow hidden
+	bg-full()
+	padding: 15.5% 10%
+// slider === end
+
+//=== Внешний вид пагинации ===
+.slick-dots
+	+below(720px)
+		bottom -20px
+	width: 100%
+	display: flex !important
+	align-items: center
+	justify-content: center
+	bottom 20px
+	li
+		+below(720px)
+			size 10px
+			flex(mid)
+	.dot
+		+below(720px)
+			flex(mid)
+			size 6px
+		background: white
+		size 20px
+		display: block
+		br(5px)
+		opacity: .5
+	.slick-active
+		.dot
+			opacity: 1
+//=== Внешний вид пагинации end===
+
+// slider control
+//Навигация внутри
+.slider-wrap
+	position relative
+.slider-control
+	flex(mid)
+	tr(all)
+	position: absolute
+	top 50%
+	margin-top: -20px
+	z-index 21
+	background: white
+	size 50px
+	br(20px)
+	cp()
+	&:hover
+		opacity: 1
+		.icon
+			fill $mark
+	.icon
+		size 14px
+.slider-control--left
+	left 14%
+.slider-control--right
+	right 14%
+// slider control === end
+
+
+// kind
+.kind
+	+below(1024px)
+		display none
+	display: flex
+	fw()
+	margin-bottom: 50px
+
+.kind__el
+	font-size: 14px
+	padding: 10px 25px
+	br(20px)
+	border 1px dashed $gray
+	white-space nowrap
+	text-align center
+	margin-right: 10px
+	margin-bottom: 10px
+	cp()
+	tr()
+	display block
+	color $brown
+	&:hover
+		background: $brown
+		border 1px solid $brown
+		color white
+
+.kind__el--active
+	background: $brown
+	border 1px solid $brown
+	color white
+// kind === end
+
+// PRODUCT
+.product-el
+	background-color #ffffff
+	tr(all)
+	position: relative
+	f()
+	fl()
+	animation-duration: .8s
+	animation-fill-mode: both
+	animation-timing-function: ease-in-out
+	animation-iteration-count: 1
+	transform: translateZ(20px)
+
+.product-el--sm
+	.product-footer
+		flex(mid)
+		fl()
+	.product-price
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	.product-add
+		width: initial
+	.product__title
+		text-align: center
+.product-el--hover
+	.product__title
+		color $mark
+	.product__img-el
+		transform scale(0.96)
+
+.product__img
+	margin-bottom: 20px
+	flex(mid)
+	img
+		margin: 0 auto
+		tr(all)
+		width: 100%
+
+.product__cont
+	f()
+	fl()
+	flex-grow 1
+
+.product__img-el
+	+below(640px)
+		padding: 35% 10%
+	tr(all)
+	width: 100%
+	height: 100%
+	bg-full()
+	background-size: contain
+	padding: 50% 10%
+
+.product__title
+	margin-bottom: 20px
+	color $dark
+	tr(all)
+	@extend .type--lg
+	font-weight 600
+	display: block
+
+.product__text
+	+below(1024px)
+		opacity:1!important
+		left initial!important
+		height: auto !important
+		transform translateY(0)!important
+		margin: 15px 0!important
+	margin: 0 auto
+	opacity .8
+	margin-bottom: auto
+	line-height: 1.6
+	tr()
+
+.product-cont
+	+below(1024px)
+		grid-template-columns: repeat(3, 1fr)
+		margin: 30px 0
+	+below(640px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr
+	//flex(between)
+	margin-bottom: 50px
+	display: grid
+	grid-gap 40px
+	grid-template-columns: repeat(4, 1fr)
+	overflow: hidden
+.product-cont--five
+	+below(1024px)
+		grid-template-columns: repeat(4, 1fr)
+		margin: 30px 0
+	+below(640px)
+		grid-template-columns: repeat(3, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr 1fr
+	grid-template-columns: repeat(5, 1fr)
+
+.product-back__title
+	@extend .type--lg
+	up()
+
+	padding: 40px 0
+	text-align: center
+	position: relative
+
+.product-back__arrow
+	flex(mid)
+	round()
+	position: absolute
+	size 44px
+	background: white
+	left: 50%
+	top 100%
+	margin-left: -22px
+	margin-top: -22px
+	.icon
+		size: 22px
+		margin-top: 9px
+
+.product-info
+	+below(768px)
+		padding: 30px 10px
+	background: red
+	padding: 30px
+	padding-top: 45px
+	margin-bottom: 30px
+
+.product-type
+	flex(between)
+	margin-bottom: 20px
+//.product-thin
+
+//.product-fat
+
+.product-type__el
+	flex(mid)
+	width: 45%
+	cp()
+	&:hover
+		.product-type__name
+			opacity 1
+		.product-type__icon
+			.icon
+				opacity 1
+
+.product-type__icon
+	margin-right: 10px
+	.icon
+		size: 36px
+		fill white
+		opacity .6
+
+
+.product-type__name
+	font-size: 16px
+	opacity .6
+	color white
+	font-weight:500
+
+.product-type--active
+	.product-type__name
+		opacity 1
+	.product-type__icon
+		.icon
+			opacity 1
+
+.product-type-condition
+	margin-bottom: 20px
+
+.product-type-condition-row
+	height: 5px;
+	border-radius: 2px;
+	background-color: #a70a13;
+	position: relative
+.product-type-condition-el
+	tr(all)
+	position: absolute
+	height: 100%
+	width: 50%
+	top 0
+	left: 0
+	background: $mark
+	border-radius: 2px;
+
+.product-size
+	flex(between)
+	margin: 30px 0
+
+.product-size__el
+	round()
+	flex(mid)
+	fl()
+	fw()
+	tr(all)
+	cp()
+	size 60px
+	border: 2px solid #ffffff;
+	background-color: rgba(252, 202, 3, 0);
+	opacity: 0.6;
+	&:hover
+		opacity: 1
+		background: $mark
+		border 0
+		.product-size__val
+			color black
+		.product-size__type
+			color black
+
+.product-size__el--active
+	opacity: 1
+	background: $mark
+	border 0
+	.product-size__val
+		color black
+	.product-size__type
+		color black
+
+.product-size__val
+	@extend .type--md
+	font-family: "PF Beau Sans Pro";
+	color white
+
+.product-size__type
+	color white
+
+.product-width
+	text-align: center
+	color white
+	font-size: 18px
+	opacity .6
+
+.product-footer
+	flex(between)
+	margin-top: 20px
+.product-price
+	+below(1200px)
+		font-size: 14px
+	+below(1024px)
+		font-size: 24px
+	+below(640px)
+		font-weight: 700
+	@extend .type--md
+	background-color #ffffff
+	@extend .type--lg
+	font-weight 600
+
+.product-get
+	+below(1200px)
+		font-size: 14px
+	+below(768px)
+		font-size: 12px
+	//display: none
+	cp()
+	@extend .btn--md
+	@extend .btn--light
+	padding: 10px 20px
+
+
+	&:hover
+		background: $mark-light
+
+.product-add
+	+below(768px)
+		font-size: 12px
+	cp()
+	@extend .type--sm
+	tr(all)
+	width: 50%
+	text-align: center
+	@extend .btn--md
+	@extend .btn--light
+	padding: 5px 20px
+	flex(mid)
+	height: 40px
+	white-space nowrap
+	&:hover
+		background: $mark
+
+.product-incr
+	+below(1200px)
+		padding: 8px 5px
+		.incr
+			height: 30px
+		.incr__nav
+			size 30px
+		.incr__val
+			height: 30px
+	flex(mid)
+	width: 50%
+	display: none
+	height: 40px
+	.incr
+		width: auto
+
+.product-footer-numb
+	.product-price
+		border-right: 0
+	.product-incr
+		display: flex
+	.product-get
+		display: none
+
+.product-size-wrap--thin
+	display: none
+
+.size-disable
+	opacity .2
+	pointer-events none
+	&:hover
+		cursor none
+
+.animate-basket
+	animation: bounceIn 0.3s 2 ease-in-out
+
+.size
+	display: grid
+	grid-gap 5px
+	grid-template-columns: repeat(auto-fit, minmax(3rem,1fr))
+	margin-top: 5px
+	padding: 2px
+	br(20px)
+	border 1px dashed $mark
+.size__el
+	+below(480px)
+		font-weight:700
+	cp()
+	tr()
+	font-size: 14px
+	padding: 8px 10px
+	text-align: center
+	&:first-child
+		border-radius 20px 0 0 20px
+	&:last-child
+		border-radius 0 20px 20px 0
+	&:hover
+		border-color $mark
+.size__el--active
+	background: $mark
+
+.product-el--add
+	br(10px)
+	padding: 5px 10px
+	flex(mid)
+	position absolute
+	top: 10px
+	right: 10px
+	background: white
+	z-index 10
+	.icon
+		margin-right: 3px
+		size 16px
+
+.product-el--add-val
+	font-weight: 700
+
+.product-weight
+	margin-right auto
+	margin-left: 10px
+	color $gray
+
+.item-add
+	cp()
+	flex(mid)
+	tr()
+	size 50px
+	border-radius 20px
+	border 2px solid #ffc400
+	background-color #ffffff
+	&:hover
+		background: $mark
+		.icon
+			fill white
+	.icon
+		size 16px
+		fill $mark
+
+// PRODUCT === end
+
+// title templates
+.title-row
+	+below(640px)
+		margin-bottom: 30px
+	position: relative
+	font-weight: 700
+	margin-bottom: 30px
+	f()
+	fw()
+	align-items center
+	.icon
+		+below(768px)
+			size 25px
+		+below(640px)
+			display: none
+		tr(all)
+		size 50px
+		fill $mark
+		&:hover
+			fill black
+	.title
+		+below(640px)
+			width: 100%
+			margin-bottom: 10px
+			margin-right: 0
+		margin-bottom: 0
+		margin-right: 20px
+		margin-top: -5px
+.title
+	@extend .type--xl
+	margin-bottom: 40px
+	font-weight: 700
+	position relative
+	line-height: 1
+
+.title--md
+	@extend .type--lg
+	font-weight: 700
+	position relative
+	line-height: 1
+	margin-bottom: 30px
+
+.title-val
+	+below(640px)
+		display none
+	position absolute
+	font-size: 14px
+	color $gray
+	top -5px
+	right: -15px
+
+.title__more
+	+below(767px)
+		margin-left: 0
+	font-weight: 400
+	@extend .type--md
+	margin-left: 20px
+	display: inline
+	align-self flex-end
+	color $brown
+
+
+// title templates === end
+
+.slider-gradient
+	position absolute
+	top 0
+	width: 18%
+	height: 100%
+	z-index 20
+.slider-gradient--left
+	left 0
+	background-image linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.9) 100%)
+.slider-gradient--right
+	right 0
+	background-image linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.9) 100%)

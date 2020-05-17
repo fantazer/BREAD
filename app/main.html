@@ -1,243 +1,868 @@
 <!DOCTYPE html>
-<html lang='en'>
-	<!--create by ANATOLY KUZNETSOV-->
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="format-detection" content="telephone=no" />
-		<!--colors-tabs-->
-		<meta name="theme-color" content="#000" />
-		<meta name="msapplication-navbutton-color" content="#000" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
-		<!--icons
-	link(rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png")
-	link(rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png")
-	link(rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png")
-	link(rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png")
-	link(rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png")
-	link(rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png")
-	link(rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png")
-	link(rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png")
-	link(rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon-180x180.png")
-	meta(name="apple-mobile-web-app-capable" content="yes")
-	meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
-	meta(name="apple-mobile-web-app-title" content="My App")
-	link(rel="yandex-tableau-widget" href="img/fav/yandex-browser-manifest.json")
-	link(rel="icon" type="image/png" sizes="228x228" href="img/fav/coast-228x228.png")
-	link(rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png")
-	link(rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png")
-	link(rel="shortcut icon" href="img/fav/favicon.ico")
-	link(rel="manifest" href="img/fav/manifest.json")
-	meta(name="mobile-web-app-capable" content="yes")
-	meta(name="theme-color" content="#020307")
-	meta(name="application-name" content="My App")
-	meta(name="msapplication-TileColor" content="#020307")
-	meta(name="msapplication-TileImage" content="img/fav/mstile-144x144.png")
-	meta(name="msapplication-config" content="img/fav/browserconfig.xml")
-	
-	-->
-		<!--SEO-->
-		<title>Document</title>
-		<meta name="description" itemprop="description" content="" />
-		<!--build:css css/vendor.css-->
-		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
-		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
-		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
-		<!--endbuild-->
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/style-edit.css" />
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet" />
-	</head>
-	<!-- mixin nameMixin()-->
-	<!-- - var args = Array.prototype.slice.call(arguments)-->
-	<!-- - for item in args-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <!--link(rel="stylesheet", href="bower/jquery-nice-select/css/nice-select.css")-->
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
 
-	<body>
-		<!--block header-->
-		<div class="main-section" style="background-image:url('https://static.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg');">
-			<div class="main-section-filter"></div>
-			<div class="header">
-				<div class="header-layer">
-					<div class="main-cont">
-						<div class="header-wrap">
-							<a class="header-logo" href="#">Logo
-								<!--img(src="img/logo-main.svg", alt="")-->
-							</a>
-							<div class="header-nav">
-								<div class="header-nav__el">
-									<div class="header-nav__el-link-wrap">
-										<a class="header-nav__el-link" href="#">О нас</a>
-										<div class="header-nav__el-icon">
-											<svg class="icon-el">
-												<use xlink:href="#arrow-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="header-nav__sub">
-										<div class="coner-wrap">
-											<div class="window-coner-top"></div>
-											<div class="header-nav__sub-wrap">
-												<a class="header-nav__sub-el" href="#">О компании</a>
-												<a class="header-nav__sub-el" href="#">Контакты</a>
-												<a class="header-nav__sub-el" href="#">Карьера</a>
-												<a class="header-nav__sub-el" href="#">Отзывы клиентов</a>
-												<a class="header-nav__sub-el" href="#">Преимущества</a>
-												<a class="header-nav__sub-el" href="#">Безопасность</a>
-												<a class="header-nav__sub-el" href="#">Новости и советы</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-nav__el">
-									<div class="header-nav__el-link-wrap">
-										<a class="header-nav__el-link" href="#">Декларация 3-НДФЛ</a>
-										<div class="header-nav__el-icon">
-											<svg class="icon-el">
-												<use xlink:href="#arrow-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="header-nav__sub">
-										<div class="coner-wrap">
-											<div class="window-coner-top"></div>
-											<div class="header-nav__sub-wrap">
-												<a class="header-nav__sub-el" href="#">О компании</a>
-												<a class="header-nav__sub-el" href="#">Контакты</a>
-												<a class="header-nav__sub-el" href="#">Карьера</a>
-												<a class="header-nav__sub-el" href="#">Отзывы клиентов</a>
-												<a class="header-nav__sub-el" href="#">Преимущества</a>
-												<a class="header-nav__sub-el" href="#">Безопасность</a>
-												<a class="header-nav__sub-el" href="#">Новости и советы</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-nav__el">
-									<div class="header-nav__el-link-wrap">
-										<a class="header-nav__el-link" href="#">Налоги</a>
-										<div class="header-nav__el-icon">
-											<svg class="icon-el">
-												<use xlink:href="#arrow-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="header-nav__sub">
-										<div class="coner-wrap">
-											<div class="window-coner-top"></div>
-											<div class="header-nav__sub-wrap">
-												<a class="header-nav__sub-el" href="#">О компании</a>
-												<a class="header-nav__sub-el" href="#">Контакты</a>
-												<a class="header-nav__sub-el" href="#">Карьера</a>
-												<a class="header-nav__sub-el" href="#">Отзывы клиентов</a>
-												<a class="header-nav__sub-el" href="#">Преимущества</a>
-												<a class="header-nav__sub-el" href="#">Безопасность</a>
-												<a class="header-nav__sub-el" href="#">Новости и советы</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-nav__el">
-									<div class="header-nav__el-link-wrap">
-										<a class="header-nav__el-link" href="#">Покупка жилья</a>
-										<div class="header-nav__el-icon">
-											<svg class="icon-el">
-												<use xlink:href="#arrow-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="header-nav__sub">
-										<div class="coner-wrap">
-											<div class="window-coner-top"></div>
-											<div class="header-nav__sub-wrap">
-												<a class="header-nav__sub-el" href="#">О компании</a>
-												<a class="header-nav__sub-el" href="#">Контакты</a>
-												<a class="header-nav__sub-el" href="#">Карьера</a>
-												<a class="header-nav__sub-el" href="#">Отзывы клиентов</a>
-												<a class="header-nav__sub-el" href="#">Преимущества</a>
-												<a class="header-nav__sub-el" href="#">Безопасность</a>
-												<a class="header-nav__sub-el" href="#">Новости и советы</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-nav__el">
-									<div class="header-nav__el-link-wrap">
-										<a class="header-nav__el-link" href="#">Другие вычеты</a>
-										<div class="header-nav__el-icon">
-											<svg class="icon-el">
-												<use xlink:href="#arrow-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="header-nav__sub">
-										<div class="coner-wrap">
-											<div class="window-coner-top"></div>
-											<div class="header-nav__sub-wrap">
-												<a class="header-nav__sub-el" href="#">О компании</a>
-												<a class="header-nav__sub-el" href="#">Контакты</a>
-												<a class="header-nav__sub-el" href="#">Карьера</a>
-												<a class="header-nav__sub-el" href="#">Отзывы клиентов</a>
-												<a class="header-nav__sub-el" href="#">Преимущества</a>
-												<a class="header-nav__sub-el" href="#">Безопасность</a>
-												<a class="header-nav__sub-el" href="#">Новости и советы</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="header-nav__el">
-									<div class="header-nav__el-link-wrap">
-										<a class="header-nav__el-link" href="#">Полезное</a>
-										<div class="header-nav__el-icon">
-											<svg class="icon-el">
-												<use xlink:href="#arrow-down"></use>
-											</svg>
-										</div>
-									</div>
-									<div class="header-nav__sub">
-										<div class="coner-wrap">
-											<div class="window-coner-top"></div>
-											<div class="header-nav__sub-wrap">
-												<a class="header-nav__sub-el" href="#">О компании</a>
-												<a class="header-nav__sub-el" href="#">Контакты</a>
-												<a class="header-nav__sub-el" href="#">Карьера</a>
-												<a class="header-nav__sub-el" href="#">Отзывы клиентов</a>
-												<a class="header-nav__sub-el" href="#">Преимущества</a>
-												<a class="header-nav__sub-el" href="#">Безопасность</a>
-												<a class="header-nav__sub-el" href="#">Новости и советы</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="header-contact">
-								<div class="header-phone">
-									<a href="tel:8(495)123-12-12">8(495)123-12-12</a>
-								</div>
-							</div>
-							<div class="menu-toggle">
-								<svg class="icon-el">
-									<use xlink:href="#menu"></use>
-								</svg>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="main-section-cont">
-				<div class="main-section-title">this is template</div>
-			</div>
-		</div>
-		<!--block header end-->
-		<!--build:js js/combined.js-->
-		<script src="bower/jquery/dist/jquery.js"></script>
-		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
-		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
-		<script src="js/jquery.smoothscroll.js"></script>
-		<!-- endbuild-->
-		<script src="js/script.js"></script>
-		<script src="js/script-edit.js"></script>
-	</body>
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <div class="header-part header-part--left">
+                <div class="header-menu js-slide-block-toggle" data-menu="menu">
+                    <div class="header-menu-btn">
+                        <svg class="icon is-close">
+                            <use xlink:href="#chef"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                        <span>Меню</span>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <div class="header-location">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Кемерово</span>
+                    </div>
+                    <a class="header-nav__el" href="#">Акции</a>
+                    <a class="header-nav__el" href="#">Доставка и оплата</a>
+                    <a class="header-nav__el" href="#">О нас</a>
+                </div>
+            </div>
+            <a class="header-logo" href="/">
+                <img src="img/logo.svg" alt="" />
+            </a>
+            <div class="header-part header-part--right">
+                <div class="header-contact">
+                    <svg class="icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                    <div class="header-contact__info">
+                        <a class="header-contact__phone" href="tel:8 495 123 45 67">8 495 123 45 67</a>
+                        <div class="header-contact__time">заказывайте с 10 до 20</div>
+                    </div>
+                </div>
+                <div class="header-auth">
+                    <div class="header-auth-false hidden">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-auth-true">
+                        <div class="user-img" style="background-image:url('img/user.jpg')"></div>
+                        <div class="user-name">Александр</div>
+                    </div>
+                </div>
+                <div class="header-cart js-slide-block-toggle" data-menu="cart">
+                    <div class="header-cart__icon">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <div class="header-cart__val">1249 р</div>
+                    <div class="header-cart__items">
+                        <span>6</span>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!--slide block cart-->
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="menu">
+                <div class="slide-block-wrap scroll">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">Готовая продукция</a>
+                        <a class="slide-menu__list-el" href="#">Готовая продукция КЦ</a>
+                        <a class="slide-menu__list-el" href="#">Восточные и мучные сладости</a>
+                        <a class="slide-menu__list-el" href="#">Десерты</a>
+                        <a class="slide-menu__list-el" href="#">Кексы</a>
+                        <a class="slide-menu__list-el" href="#">Печенье</a>
+                        <a class="slide-menu__list-el" href="#">Пироги</a>
+                        <a class="slide-menu__list-el" href="#">Пирожные</a>
+                        <a class="slide-menu__list-el" href="#">Пряники</a>
+                        <a class="slide-menu__list-el" href="#">Торты</a>
+                        <a class="slide-menu__list-el" href="#">Готовая продукция ХЦ</a>
+                        <a class="slide-menu__list-el" href="#">Багеты, батоны</a>
+                        <a class="slide-menu__list-el" href="#">Булочки</a>
+                        <a class="slide-menu__list-el" href="#">Киши, Заливные</a>
+                        <a class="slide-menu__list-el" href="#">Пироги</a>
+                        <a class="slide-menu__list-el" href="#">Тесто</a>
+                        <a class="slide-menu__list-el" href="#">Хлеба</a>
+                        <a class="slide-menu__list-el" href="#">Кулинария</a>
+                        <a class="slide-menu__list-el" href="#">Гастрономия</a>
+                        <a class="slide-menu__list-el" href="#">Кофе для кофейни</a>
+                        <a class="slide-menu__list-el" href="#">Молоко</a>
+                        <a class="slide-menu__list-el" href="#">Напитки и соки</a>
+                    </div>
+                </div>
+            </div>
+            <!--slide block cart-->
+            <div class="slide-block slide-block--right slide-block--cart" data-menu="cart">
+                <div class="basket">
+                    <div class="basket-empty hidden">
+                        <!-- remove .hidden for empty basket-->
+                        <div class="basket-empty__img">
+                            <img src="img/empty.svg" alt="" />
+                        </div>
+                        <div class="basket-empty__text">Добавьте в корзину что-либо. Вам понравится наше меню!</div>
+                    </div>
+                    <div class="basket-container scroll">
+                        <div class="basket-title">Мой заказ</div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 1</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 2</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 3</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 4</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 5</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 6</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 7</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 8</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 9</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-footer">
+                        <div class="basket-total">
+                            <div class="basket-total__text">Итого</div>
+                            <div class="basket-total__val">2 425 р</div>
+                        </div>
+                        <div class="basket-total-get">Оформить заказ
+                            <!-- add class .btn--disable for empty basket-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="slider-wrap">
+                <div class="slider-gradient slider-gradient--left"></div>
+                <div class="slider-gradient slider-gradient--right"></div>
+                <div class="slider-control slider-control--left">
+                    <svg class="icon">
+                        <use xlink:href="#arrow-conner-left"></use>
+                    </svg>
+                </div>
+                <div class="slider-control slider-control--right">
+                    <svg class="icon">
+                        <use xlink:href="#arrow-conner-right"></use>
+                    </svg>
+                </div>
+                <div class="slider slider-item">
+                    <a class="slider__el" href="#">
+                        <div class="slider__el-img" style="background-image:url('img/slider-el-1.jpg')"></div>
+                    </a>
+                    <a class="slider__el" href="#">
+                        <div class="slider__el-img" style="background-image:url('img/slider-el-1.jpg')"></div>
+                    </a>
+                    <a class="slider__el" href="#">
+                        <div class="slider__el-img" style="background-image:url('img/slider-el-1.jpg')"></div>
+                    </a>
+                    <a class="slider__el" href="#">
+                        <div class="slider__el-img" style="background-image:url('img/slider-el-1.jpg')"></div>
+                    </a>
+                    <a class="slider__el" href="#">
+                        <div class="slider__el-img" style="background-image:url('img/slider-el-1.jpg')"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="kind">
+                    <!--add class .kind__el--active for active elements-->
+                    <div class="kind__el">Готовая продукция</div>
+                    <div class="kind__el">Готовая продукция КЦ</div>
+                    <div class="kind__el">Восточные и мучные сладости</div>
+                    <div class="kind__el">Десерты</div>
+                    <div class="kind__el">Кексы</div>
+                    <div class="kind__el">Печенье</div>
+                    <div class="kind__el">Пироги</div>
+                    <div class="kind__el">Пирожные</div>
+                    <div class="kind__el">Пряники</div>
+                    <div class="kind__el">Торты</div>
+                    <div class="kind__el">Готовая продукция ХЦ</div>
+                    <div class="kind__el">Багеты, батоны</div>
+                    <div class="kind__el">Булочки</div>
+                    <div class="kind__el">Киши, Заливные</div>
+                    <div class="kind__el">Пироги</div>
+                    <div class="kind__el">Тесто</div>
+                    <div class="kind__el">Хлеба</div>
+                    <div class="kind__el">Кулинария</div>
+                    <div class="kind__el">Гастрономия</div>
+                    <div class="kind__el">Кофе для кофейни</div>
+                    <div class="kind__el">Молоко</div>
+                    <div class="kind__el">Напитки и соки</div>
+                    <div class="kind__el">Разное</div>
+                    <div class="kind__el">Чаи</div>
+                </div>
+                <!--product-cont-->
+                <div class="main-cont">
+                    <div class="title-row">
+                        <div class="title">Готовая продукция
+                            <div class="title-val">15</div>
+                        </div>
+                        <a class="title__more" href="#">Смотреть все товары</a>
+                    </div>
+                    <div class="product-cont">
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-el">
+                            <div class="product-el--add">
+                                <svg class="icon">
+                                    <use xlink:href="#cart-empty"></use>
+                                </svg>
+                                <div class="product-el--add-val">2</div>
+                            </div>
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                                <div class="product-box">
+                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                </div>
+                                <div class="size">
+                                    <div class="size__el size__el--active">350 г</div>
+                                    <div class="size__el">500 г</div>
+                                    <div class="size__el">750 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">860 р.</div>
+                                    <div class="product-weight">300 гр</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="product-sale" href="#" style="background-image:url('img/sale-banner.jpg')"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <!--block footer end-->
+    </div>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
 
 </html>

@@ -4,6 +4,38 @@ include block_html/_include.pug
 .page
 	+header()
 	.content
-		//content her
+		.slider-wrap
+			.slider-gradient.slider-gradient--left
+			.slider-gradient.slider-gradient--right
+			.slider-control.slider-control--left
+				+icon("arrow-conner-left","icon")
+			.slider-control.slider-control--right
+				+icon("arrow-conner-right","icon")
+			.slider.slider-item
+				- for (var i=0;i<5;i++)
+					a(href="#").slider__el
+						.slider__el-img(style="background-image:url('img/slider-el-1.jpg')")
+
+		.main-cont
+			.kind
+				//add class .kind__el--active for active elements
+				-
+					var items = [
+						'Готовая продукция', 'Готовая продукция КЦ', 'Восточные и мучные сладости', 'Десерты', 'Кексы', 'Печенье', 'Пироги', 'Пирожные', 'Пряники', 'Торты', 'Готовая продукция ХЦ', 'Багеты, батоны', 'Булочки', 'Киши, Заливные', 'Пироги', 'Тесто', 'Хлеба', 'Кулинария', 'Гастрономия', 'Кофе для кофейни', 'Молоко', 'Напитки и соки', 'Разное', 'Чаи'
+					];
+				each item in items
+					.kind__el #{item}
+
+			//product-cont
+			.main-cont
+				.title-row
+					.title Готовая продукция
+						.title-val 15
+					a(href="#").title__more Смотреть все товары
+				.product-cont
+					- for (var i=0;i< 9;i++)
+						+product()
+					a(href="#" style="background-image:url('img/sale-banner.jpg')").product-sale
+
 	+footer()
 include ./block_html/_script.pug

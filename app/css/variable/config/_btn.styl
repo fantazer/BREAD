@@ -1,7 +1,6 @@
 // ============================ Buttons ============================
 .btn
-	up()
-	br(4px)
+	br(20px)
 	tr(all)
 	display inline-block
 	background none
@@ -17,8 +16,8 @@
 
 .btn--md
 	@extend .btn
-	font-size 15px
-	padding 20px 45px
+	@extend .type--md
+	padding 18px 30px
 
 .btn--lg
 	@extend .btn
@@ -33,25 +32,38 @@
 
 .btn--mark
 	@extend .btn
-	color white
 	background $mark
 	.nav-icon
 		fill white
 	&:hover
-		background-color darken($mark,20)
-		color white!important
+		background-color lighten($mark,10)
 	&:active
-		background-color darken($mark,20)
+		color $red
 	input[type="submit"]
 		border 0
 	.nav-icon
 		fill white
 
+
+.btn--red
+	@extend .btn
+	background $red
+	color white
+	.nav-icon
+		fill white
+	&:hover
+		color $mark!important
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
+
 .btn--disable
 	@extend .disabled
-	border 1px solid $border-color
-	background-color #ffffff
+	background-color $snow
 	color #000000
+	font-weight: 700
 
 .btn--light
 	@extend .btn

@@ -6,28 +6,28 @@ mixin checkbox(text,disable)
   .check-el
     if disable
       label.style-label.style-label--checkbox.style-label--disable
-        input(type="checkbox").sytle-input
-        .sytle-input-element
+        input(type="checkbox").style-input
+        .style-input-element
           +icon("checked","icon-check")
-        .sytle-input-text=text
+        .style-input-text=text
     else
       label.style-label.style-label--checkbox
-        input(type="checkbox").sytle-input
-        .sytle-input-element
+        input(type="checkbox").style-input
+        .style-input-element
           +icon("checked","icon-check")
-        .sytle-input-text=text
+        .style-input-text=text
 mixin radio(text,group,checked)
   .check-el
     label.style-label.style-label--radio
-      input(type="radio" name=group checked=checked).sytle-input
-      .sytle-input-element
+      input(type="radio" name=group checked=checked).style-input
+      .style-input-element
         .icon-radio
-      .sytle-input-text=text
+      .style-input-text=text
 
-mixin incr(a)
+mixin incr(a,type)
   - a = a || 1
   .elements-icr-block
-    .incr
+    .incr(class=type?type:'')
       .incr__minus.incr__nav
         +icon("minus","icon")
       .incr__val
@@ -35,3 +35,24 @@ mixin incr(a)
         .incr__val-coner
       .incr__plus.incr__nav
         +icon("plus","icon")
+
+mixin product()
+  .product-el
+    .product-el--add
+      +icon("cart-empty","icon")
+      .product-el--add-val 2
+    a(href="#").product__img
+      .product__img-el(style="background-image:url('img/item-sm-1.jpg')")
+    .product__cont
+      a(href="#").product__title Хлеб беларусское чудо
+      .product-box
+        .product__text Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда
+      .size
+        .size__el.size__el--active 350 г
+        .size__el 500 г
+        .size__el 750 г
+      .product-footer
+        .product-price 860 р.
+        .product-weight 300 гр
+        .item-add
+          +icon("plus","icon")
