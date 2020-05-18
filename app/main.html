@@ -54,7 +54,8 @@
                 </div>
             </div>
             <a class="header-logo" href="/">
-                <img src="img/logo.svg" alt="" />
+                <img class="header-logo--md" src="img/logo.svg" alt="" />
+                <img class="header-logo--sm" src="img/logo--small.svg" alt="" />
             </a>
             <div class="header-part header-part--right">
                 <div class="header-contact">
@@ -499,7 +500,7 @@
             </div>
         </div>
         <!--block header end-->
-        <div class="content">
+        <div class="content content--clear">
             <div class="slider-wrap">
                 <div class="slider-gradient slider-gradient--left"></div>
                 <div class="slider-gradient slider-gradient--right"></div>
@@ -559,300 +560,414 @@
                     <div class="kind__el">Разное</div>
                     <div class="kind__el">Чаи</div>
                 </div>
-                <!--product-cont-->
-                <div class="main-cont">
-                    <div class="title-row">
-                        <div class="title">Готовая продукция
-                            <div class="title-val">15</div>
-                        </div>
-                        <a class="title__more" href="#">Смотреть все товары</a>
+            </div>
+            <!--product-cont-->
+            <div class="main-cont">
+                <div class="title-row">
+                    <div class="title">Готовая продукция
+                        <div class="title-val">15</div>
                     </div>
-                    <div class="product-cont">
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    <a class="title__more" href="#">Смотреть все товары</a>
+                </div>
+                <div class="product-cont">
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="product-el">
-                            <div class="product-el--add">
-                                <svg class="icon">
-                                    <use xlink:href="#cart-empty"></use>
-                                </svg>
-                                <div class="product-el--add-val">2</div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
-                            <a class="product__img" href="#">
-                                <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                            </a>
-                            <div class="product__cont">
-                                <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                                <div class="product-box">
-                                    <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                                </div>
-                                <div class="size">
-                                    <div class="size__el size__el--active">350 г</div>
-                                    <div class="size__el">500 г</div>
-                                    <div class="size__el">750 г</div>
-                                </div>
-                                <div class="product-footer">
-                                    <div class="product-price">860 р.</div>
-                                    <div class="product-weight">300 гр</div>
-                                    <div class="item-add">
-                                        <svg class="icon">
-                                            <use xlink:href="#plus"></use>
-                                        </svg>
-                                    </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
-                        <a class="product-sale" href="#" style="background-image:url('img/sale-banner.jpg')"></a>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                            </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                            </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el--add">
+                            <svg class="icon">
+                                <use xlink:href="#cart-empty"></use>
+                            </svg>
+                            <div class="product-el--add-val">2</div>
+                        </div>
+                        <a class="product__img" href="#">
+                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                        </a>
+                        <div class="product__cont">
+                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                            </div>
+                            <div class="size">
+                                <div class="size__el size__el--active">350 г</div>
+                                <div class="size__el">500 г</div>
+                                <div class="size__el">750 г</div>
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price">860 р.</div>
+                                <div class="product-weight">300 гр</div>
+                                <div class="item-add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--block footer-->
+        <div class="footer">
+            <div class="pay-row">
+                <img src="img/pay-maestro.svg" alt="" />
+                <img src="img/pay-master.svg" alt="" />
+                <img src="img/pay-visa.svg" alt="" />
+                <img src="img/pay-mir.svg" alt="" />
+            </div>
+            <div class="footer__nav">
+                <a class="footer__nav-el" href="#">Меню</a>
+                <a class="footer__nav-el" href="#">Акции</a>
+                <a class="footer__nav-el" href="#">Доставка и оплата</a>
+                <a class="footer__nav-el" href="#">О нас</a>
+                <a class="footer__nav-el footer__nav-el--light" href="#">Публичная оферта</a>
+                <a class="footer__nav-el footer__nav-el--light" href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__create">
+                <a class="jq" href="#">
+                    <span>Разработка сайта</span>
+                    <img src="img/jq.svg" alt="" />
+                </a>
+            </div>
+        </div>
         <!--block footer end-->
     </div>
     <!--build:js ./js/combined.js-->

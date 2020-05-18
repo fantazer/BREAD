@@ -15,7 +15,8 @@ mixin header()
 				a(href="#").header-nav__el Доставка и оплата
 				a(href="#").header-nav__el О нас
 		a(href="/").header-logo
-			img(src="img/logo.svg", alt="")
+			img(src="img/logo.svg", alt="").header-logo--md
+			img(src="img/logo--small.svg", alt="").header-logo--sm
 		.header-part.header-part--right
 			.header-contact
 				+icon("phone","icon")

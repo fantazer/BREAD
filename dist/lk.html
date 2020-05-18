@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <div class="header-part header-part--left">
+                <div class="header-menu js-slide-block-toggle" data-menu="menu">
+                    <div class="header-menu-btn">
+                        <svg class="icon is-close">
+                            <use xlink:href="#chef"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                        <span>Меню</span>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <div class="header-location">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Кемерово</span>
+                    </div>
+                    <a class="header-nav__el" href="#">Акции</a>
+                    <a class="header-nav__el" href="#">Доставка и оплата</a>
+                    <a class="header-nav__el" href="#">О нас</a>
+                </div>
+            </div>
+            <a class="header-logo" href="/">
+                <img class="header-logo--md" src="img/logo.svg" alt="" />
+                <img class="header-logo--sm" src="img/logo--small.svg" alt="" />
+            </a>
+            <div class="header-part header-part--right">
+                <div class="header-contact">
+                    <svg class="icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                    <div class="header-contact__info">
+                        <a class="header-contact__phone" href="tel:8 495 123 45 67">8 495 123 45 67</a>
+                        <div class="header-contact__time">заказывайте с 10 до 20</div>
+                    </div>
+                </div>
+                <div class="header-auth">
+                    <div class="header-auth-false hidden">
+                        <svg class="icon">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Войти</span>
+                    </div>
+                    <div class="header-auth-true">
+                        <div class="user-img" style="background-image:url('img/user.jpg')"></div>
+                        <div class="user-name">Александр</div>
+                    </div>
+                </div>
+                <div class="header-cart js-slide-block-toggle" data-menu="cart">
+                    <div class="header-cart__icon">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <div class="header-cart__val">1249 р</div>
+                    <div class="header-cart__items">
+                        <span>6</span>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!--slide block cart-->
+            <div class="slide-block slide-block--left slide-block--menu" data-menu="menu">
+                <div class="slide-block-wrap scroll">
+                    <div class="slide-menu__list">
+                        <a class="slide-menu__list-el" href="#">Готовая продукция</a>
+                        <a class="slide-menu__list-el" href="#">Готовая продукция КЦ</a>
+                        <a class="slide-menu__list-el" href="#">Восточные и мучные сладости</a>
+                        <a class="slide-menu__list-el" href="#">Десерты</a>
+                        <a class="slide-menu__list-el" href="#">Кексы</a>
+                        <a class="slide-menu__list-el" href="#">Печенье</a>
+                        <a class="slide-menu__list-el" href="#">Пироги</a>
+                        <a class="slide-menu__list-el" href="#">Пирожные</a>
+                        <a class="slide-menu__list-el" href="#">Пряники</a>
+                        <a class="slide-menu__list-el" href="#">Торты</a>
+                        <a class="slide-menu__list-el" href="#">Готовая продукция ХЦ</a>
+                        <a class="slide-menu__list-el" href="#">Багеты, батоны</a>
+                        <a class="slide-menu__list-el" href="#">Булочки</a>
+                        <a class="slide-menu__list-el" href="#">Киши, Заливные</a>
+                        <a class="slide-menu__list-el" href="#">Пироги</a>
+                        <a class="slide-menu__list-el" href="#">Тесто</a>
+                        <a class="slide-menu__list-el" href="#">Хлеба</a>
+                        <a class="slide-menu__list-el" href="#">Кулинария</a>
+                        <a class="slide-menu__list-el" href="#">Гастрономия</a>
+                        <a class="slide-menu__list-el" href="#">Кофе для кофейни</a>
+                        <a class="slide-menu__list-el" href="#">Молоко</a>
+                        <a class="slide-menu__list-el" href="#">Напитки и соки</a>
+                    </div>
+                </div>
+            </div>
+            <!--slide block cart-->
+            <div class="slide-block slide-block--right slide-block--cart" data-menu="cart">
+                <div class="basket">
+                    <div class="basket-empty hidden">
+                        <!-- remove .hidden for empty basket-->
+                        <div class="basket-empty__img">
+                            <img src="img/empty.svg" alt="" />
+                        </div>
+                        <div class="basket-empty__text">Добавьте в корзину что-либо. Вам понравится наше меню!</div>
+                    </div>
+                    <div class="basket-container scroll">
+                        <div class="basket-title">Мой заказ</div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 1</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 2</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 3</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 4</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 5</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 6</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 7</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 8</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__el">
+                            <div class="basket__el-info">
+                                <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                <div class="basket__cont">
+                                    <div class="basket__name">
+                                        <a href="#">Хлеб Белый 9</a>
+                                        <div class="basket__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="basket__descr">435 г</div>
+                                    <div class="basket__el-change">
+                                        <div class="basket__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="basket__price">120 р.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket-footer">
+                        <div class="basket-total">
+                            <div class="basket-total__text">Итого</div>
+                            <div class="basket-total__val">2 425 р</div>
+                        </div>
+                        <div class="basket-total-get">Оформить заказ
+                            <!-- add class .btn--disable for empty basket-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content content--gray">
+            <!--product-cont-->
+            <div class="main-cont">
+                <div class="lk">
+                    <div class="lk-toolbar">
+                        <div class="profile">
+                            <div class="profile__img">
+                                <!--for user img-->
+                                <div class="profile__img-el hidden" style="background-image:url('img/user.jpg')"></div>
+                                <div class="profile__img-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#user"></use>
+                                    </svg>
+                                </div>
+                                <div class="profile__img-load">
+                                    <div class="profile__img-load-icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#upload"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-wrap">
+                                <div class="profile__name">Константин</div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">телефон</div>
+                                    <div class="profile-row__val">+7 (865) 543 45 45</div>
+                                </div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">e-mail</div>
+                                    <div class="profile-row__val">prosto_vlad@gmail.com</div>
+                                </div>
+                                <div class="profile-row">
+                                    <div class="profile-row__name">день рождения</div>
+                                    <div class="profile-row__val">06.09.1991</div>
+                                </div>
+                                <a class="profile-change" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#edit"></use>
+                                    </svg>
+                                    <span>изменить информацию</span>
+                                </a>
+                                <div class="profile-footer">
+                                    <div class="profile-footer-info">
+                                        <div class="profile-footer__text hidden">у вас нет бонусов
+                                            <!-- for bonus = 0-->
+                                        </div>
+                                        <div class="profile-footer__text">мои бонусы:</div>
+                                        <div class="profile-footer__val">2500</div>
+                                    </div>
+                                    <div class="profile-footer__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#info"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="exit" href="#">
+                            <div class="icon-block icon-block--mark">
+                                <svg class="icon">
+                                    <use xlink:href="#exit"></use>
+                                </svg>
+                            </div>
+                            <span>Выйти</span>
+                        </a>
+                    </div>
+                    <div class="lk-info">
+                        <div class="lk-info__el box">
+                            <div class="title title--lg">Мои адреса</div>
+                            <div class="address-wrap">
+                                <div class="address__el">
+                                    <div class="address__type">Дом</div>
+                                    <div class="address__val">Москва, ул. Петропавловская, д. 101, корп. 1, кв. 25, подъезд 8</div>
+                                    <div class="address-footer">
+                                        <div class="address-footer__el address-edit">
+                                            <svg class="icon">
+                                                <use xlink:href="#edit"></use>
+                                            </svg>
+                                            <span>Редактировать</span>
+                                        </div>
+                                        <div class="address-footer__el address-remove">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address__el">
+                                    <div class="address__type">Работа</div>
+                                    <div class="address__val">Москва, ул. Петропавловская, д. 101, корп. 1, кв. 25, подъезд 8</div>
+                                    <div class="address-footer">
+                                        <div class="address-footer__el address-edit">
+                                            <svg class="icon">
+                                                <use xlink:href="#edit"></use>
+                                            </svg>
+                                            <span>Редактировать</span>
+                                        </div>
+                                        <div class="address-footer__el address-remove">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address__add">
+                                    <div class="icon-block icon-block--empty">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                    <span>добавить адрес</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-info__el box">
+                            <div class="title title--lg">История заказов</div>
+                            <div class="history">
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">В обработке
+                                            <!-- add class .history-card__state--true for delivered-->
+                                        </div>
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Доставка курьером</div>
+                                                    <div class="history-info__el-val">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Время доставки</div>
+                                                    <div class="history-info__el-val">Как можно быстрее</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Способ оплаты</div>
+                                                    <div class="history-info__el-val">Наличными курьеру</div>
+                                                </div>
+                                            </div>
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Состав заказа</div>
+                                                    <div class="goods-list">
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="history-info-total">
+                                                    <div class="history-info-total__text">Сумма:</div>
+                                                    <div class="history-info-total__val">1 184р</div>
+                                                </div>
+                                                <div class="goods-get-row">
+                                                    <div class="goods-get">Повторить заказ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">В обработке
+                                            <!-- add class .history-card__state--true for delivered-->
+                                        </div>
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Доставка курьером</div>
+                                                    <div class="history-info__el-val">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Время доставки</div>
+                                                    <div class="history-info__el-val">Как можно быстрее</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Способ оплаты</div>
+                                                    <div class="history-info__el-val">Наличными курьеру</div>
+                                                </div>
+                                            </div>
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Состав заказа</div>
+                                                    <div class="goods-list">
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="history-info-total">
+                                                    <div class="history-info-total__text">Сумма:</div>
+                                                    <div class="history-info-total__val">1 184р</div>
+                                                </div>
+                                                <div class="goods-get-row">
+                                                    <div class="goods-get">Повторить заказ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">В обработке
+                                            <!-- add class .history-card__state--true for delivered-->
+                                        </div>
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Доставка курьером</div>
+                                                    <div class="history-info__el-val">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Время доставки</div>
+                                                    <div class="history-info__el-val">Как можно быстрее</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Способ оплаты</div>
+                                                    <div class="history-info__el-val">Наличными курьеру</div>
+                                                </div>
+                                            </div>
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Состав заказа</div>
+                                                    <div class="goods-list">
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="history-info-total">
+                                                    <div class="history-info-total__text">Сумма:</div>
+                                                    <div class="history-info-total__val">1 184р</div>
+                                                </div>
+                                                <div class="goods-get-row">
+                                                    <div class="goods-get">Повторить заказ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">В обработке
+                                            <!-- add class .history-card__state--true for delivered-->
+                                        </div>
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Доставка курьером</div>
+                                                    <div class="history-info__el-val">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Время доставки</div>
+                                                    <div class="history-info__el-val">Как можно быстрее</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Способ оплаты</div>
+                                                    <div class="history-info__el-val">Наличными курьеру</div>
+                                                </div>
+                                            </div>
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Состав заказа</div>
+                                                    <div class="goods-list">
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="history-info-total">
+                                                    <div class="history-info-total__text">Сумма:</div>
+                                                    <div class="history-info-total__val">1 184р</div>
+                                                </div>
+                                                <div class="goods-get-row">
+                                                    <div class="goods-get">Повторить заказ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-card">
+                                    <div class="history-card__wrap">
+                                        <div class="history-card__info">
+                                            <div class="history-card__numb">№ 43576</div>
+                                            <div class="history-card__date">28 Сентября, 2017</div>
+                                        </div>
+                                        <div class="history-card__state history-card__state--true">В обработке
+                                            <!-- add class .history-card__state--true for delivered-->
+                                        </div>
+                                        <div class="history-card__condition">
+                                            <div class="history-card__size">3 товара</div>
+                                            <div class="history-card__price_val">5430 р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info">
+                                        <div class="history-info-wrap">
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Доставка курьером</div>
+                                                    <div class="history-info__el-val">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Время доставки</div>
+                                                    <div class="history-info__el-val">Как можно быстрее</div>
+                                                </div>
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Способ оплаты</div>
+                                                    <div class="history-info__el-val">Наличными курьеру</div>
+                                                </div>
+                                            </div>
+                                            <div class="history-info-col">
+                                                <div class="history-info__el">
+                                                    <div class="history-info__el-title">Состав заказа</div>
+                                                    <div class="goods-list">
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                        <div class="goods-list__el">
+                                                            <div class="goods-list__el-name">San Benedetto Aquavitamin an Benedetto</div>
+                                                            <div class="goods-list__el-val">x 2</div>
+                                                            <div class="goods-list__el-cost">1003 р.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="history-info-total">
+                                                    <div class="history-info-total__text">Сумма:</div>
+                                                    <div class="history-info-total__val">1 184р</div>
+                                                </div>
+                                                <div class="goods-get-row">
+                                                    <div class="goods-get">Повторить заказ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="history-more">
+                                    <svg class="icon">
+                                        <use xlink:href="#refresh"></use>
+                                    </svg>
+                                    <span>показать еще</span>
+                                </div>
+                                <div class="order-empty hidden">
+                                    <div class="order-empty-icon">
+                                        <img src="img/anxiety.svg" alt="" />
+                                    </div>
+                                    <div class="order-empty-title">Ваша история пуста =(</div>
+                                    <div class="order-empty-text">Сделайте заказ</div>
+                                    <div class="btn--md btn--mark">Посмотреть меню</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer">
+            <div class="pay-row">
+                <img src="img/pay-maestro.svg" alt="" />
+                <img src="img/pay-master.svg" alt="" />
+                <img src="img/pay-visa.svg" alt="" />
+                <img src="img/pay-mir.svg" alt="" />
+            </div>
+            <div class="footer__nav">
+                <a class="footer__nav-el" href="#">Меню</a>
+                <a class="footer__nav-el" href="#">Акции</a>
+                <a class="footer__nav-el" href="#">Доставка и оплата</a>
+                <a class="footer__nav-el" href="#">О нас</a>
+                <a class="footer__nav-el footer__nav-el--light" href="#">Публичная оферта</a>
+                <a class="footer__nav-el footer__nav-el--light" href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__create">
+                <a class="jq" href="#">
+                    <span>Разработка сайта</span>
+                    <img src="img/jq.svg" alt="" />
+                </a>
+            </div>
+        </div>
+        <!--block footer end-->
+    </div>
+    <script src="./js/combined.js"></script>
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

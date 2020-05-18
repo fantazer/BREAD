@@ -3,7 +3,7 @@ include block_html/_include.pug
 
 .page
 	+header()
-	.content
+	.content.content--clear
 		.slider-wrap
 			.slider-gradient.slider-gradient--left
 			.slider-gradient.slider-gradient--right
@@ -26,16 +26,15 @@ include block_html/_include.pug
 				each item in items
 					.kind__el #{item}
 
-			//product-cont
-			.main-cont
-				.title-row
-					.title Готовая продукция
-						.title-val 15
-					a(href="#").title__more Смотреть все товары
-				.product-cont
-					- for (var i=0;i< 9;i++)
-						+product()
-					a(href="#" style="background-image:url('img/sale-banner.jpg')").product-sale
+		//product-cont
+		.main-cont
+			.title-row
+				.title Готовая продукция
+					.title-val 15
+				a(href="#").title__more Смотреть все товары
+			.product-cont
+				- for (var i=0;i< 12;i++)
+					+product()
 
 	+footer()
 include ./block_html/_script.pug
