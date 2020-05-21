@@ -1,0 +1,56 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		//product-cont
+		.main-cont
+			.title Корзина
+			.order
+				.order-cont
+					.order-item
+						- for (var i=0;i<5;i++)
+						.order__el
+							.order__el-info
+								a(href="#" style="background-image:url('img/item-sm-3.jpg')" ).order__img
+								.order__name
+									a(href="#").order__name-text Хлеб беларусское чудо
+									.order__adds 450 г
+							.order__el-change
+								.order__inc
+									+incr()
+								.order__price 120 р.
+								.order__delete
+									+icon("trash","icon")
+					.total
+						.steps
+							a(href="#").step__el.step__el--active
+								.step__el-val 1
+								.step__el-name Корзина
+							.step-line
+							a(href="#").step__el
+								.step__el-val 2
+								.step__el-name Оформление заказа
+							.step-line
+							a(href="#").step__el
+								.step__el-val 3
+								.step__el-name Заказ принят
+						.total-title Мой заказ
+						.total-row
+							.total-row__type Сумма заказа
+							.total-row__val 2 400 р
+						.total-row
+							.total-row__type Доставка
+							.total-row__val 250 р
+						.total-cost
+							.total-cost__text Итого
+							.total-cost__val 2 650 р
+						.total-get Оформить заказ
+			.title Рекомендуем к заказу
+			.order-add
+				- for (var i=0;i< 4;i++)
+				+product()
+
+	+footer()
+include ./block_html/_script.pug

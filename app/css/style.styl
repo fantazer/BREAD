@@ -304,7 +304,9 @@ body
 .basket__el-info
 	f()
 	align-items: flex-start
-	width: 100%
+	+below(768px)
+		width: 100%
+	width: 55%
 .basket__img
 	+below(768px)
 		margin-right: 0
@@ -348,7 +350,9 @@ body
 
 .basket__el-change
 	flex(between)
-
+	+below(640px)
+		width: 100%
+	width: 45%
 .basket__price
 	+below(768px)
 		margin-top: 20px
@@ -882,10 +886,29 @@ body
 	display: grid
 	grid-gap 5px
 	grid-template-columns: repeat(auto-fit, minmax(3rem,1fr))
-	margin-top: 5px
 	padding: 2px
 	br(20px)
 	border 1px dashed $mark
+
+.size--lg
+	br(30px)
+	.size__el
+		@extend .type--md
+		padding: 20px 10px
+		font-weight: 700
+		&:first-child
+			border-radius 30px 0 0 30px
+		&:last-child
+			border-radius 0 30px 30px 0
+
+.size--fluid
+	@extend .size--lg
+	f()
+	.size__el
+		flex-grow 1
+		font-weight: 700
+		font-size: 14px
+
 .size__el
 	+below(480px)
 		font-weight:700
@@ -1003,11 +1026,15 @@ body
 	line-height: 1
 
 .title--md
+	@extend .type--md
+	font-weight: 700
+	margin-bottom: 20px
+.title--lg
 	@extend .type--lg
 	font-weight: 700
 	position relative
 	line-height: 1
-	margin-bottom: 30px
+	margin-bottom: 20px
 
 .title-val
 	+below(640px)
@@ -1505,6 +1532,11 @@ body
 	white-space nowrap
 	text-overflow ellipsis
 	overflow hidden
+
+.goods-list__el-name--gray
+	color black
+
+
 .goods-list__el-val
 	width: 15%
 	text-align center
@@ -1575,4 +1607,435 @@ body
 			fill $red
 	.icon
 		fill $mark
+
+
+// ==== ORDER ====
+.order
+	+below(968px)
+		fw()
+	f()
+	justify-content:space-between
+	align-items streth
+
+.order-cont
+	+below(960px)
+		fw()
+		margin-bottom: 50px
+	f()
+	justify-content space-between
+	align-items: flex-start
+	margin-bottom: 100px
+	width: 100%
+
+
+
+.total
+	+below(960px)
+		width: 100%
+	width: calc(30% - 20px)
+	margin-left auto
+.total-title
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 30px
+.total-row
+	flex(between)
+	margin-bottom: 10px
+.total-row__val
+	font-weight: 700
+	@extend .type--md	
+	white-space nowrap
+.total-text
+	@extend .type--md
+	margin-bottom: 10px
+	line-height: 1.6
+	font-size: 14px
+.total-cost
+	flex(between)
+	padding-top: 20px
+	margin-top: 20px
+	border-top 1px solid $border-color
+	margin-bottom: 30px
+
+.total-cost__text
+	font-weight 700
+	@extend .type--md
+.total-cost__val
+	font-weight 700
+	@extend .type--xl
+
+.total-get
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 20px 50px
+	width: 100%
+
+
+.order__el-info
+	+below(768px)
+		fl()
+		justify-content center
+	f()
+	align-items center
+
+.order__el
+	+below(768px)
+		fw()
+		flex(mid)
+		fl()
+		position: relative
+	display flex!important
+	flex(between)
+	padding: 10px 0
+	outline none!important
+	margin-bottom: 10px
+	border-bottom 1px solid $border-color
+.order__img
+	+below(768px)
+			margin-right: 0
+			height: 100px
+			width: 100px
+	size 70px
+	br(5px)
+	bg-full()
+	background-size: contain
+	margin-right: 20px
+
+/*.order__name
+	font-weight: 700
+	font-size: 14px
+	margin-bottom: 5px
+	display block*/
+
+.order__name-text
+	+below(768px)
+			font-size: 20px
+			margin-bottom: 20px
+			text-align: center
+	@extend .type--md
+	tr()
+	margin-bottom: 5px
+	font-weight 700
+	color $dark
+	display block
+	&:hover
+			color $mark
+.order__adds
+	+below(768px)
+		width: 100%
+		text-align center
+
+.order__el-change
+	+below(768px)
+		width: 100%
+		fl()
+	f()
+	align-items center
+	width: 35%
+
+.order__price
+	+below(768px)
+		margin: 20px 0
+		font-size: 20px
+		margin-right:initial
+		text-align center
+	font-weight 700
+	@extend .type--lg
+	white-space nowrap
+.order__delete
+	+below(768px)
+		position absolute
+		top 0
+		right: 0
+	margin-left: auto
+	.icon
+		cp()
+		tr(all)
+		size 16px
+		fill black
+		&:hover
+				fill $red
+
+.order-item
+	+below(960px)
+		margin-bottom: 20px
+		width: 100%
+	width: 65%
+
+.order-add
+	+below(1024px)
+		grid-template-columns: repeat(3, 1fr)
+	+below(640px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr
+	display: grid
+	grid-gap 40px
+	grid-template-columns: repeat(4, 1fr)
+	margin-bottom: 80px
+
+// ==== ORDER ==== === end
+
+// steps
+.steps
+	+below(1024px)
+		display none
+	f()
+	justify-content space-between
+	width: 100%
+	margin-bottom: 30px
+.step__el
+	f()
+	fl()
+	position relative
+	pointer-events none
+	align-items center
+.step-line
+	height: 1px
+	width: 100%
+	margin-top: 30px
+	border 1px dashed $border-color
+.step__el-val
+	size 60px
+	border 1px dashed $border-color
+	flex(mid)
+	br(20px)
+	font-weight: 700
+	margin-bottom: 10px
+	color $gray
+
+.step__el-name
+	@extend .type--sm
+	text-align center
+	color $gray
+.step__el--current
+	&:before
+		content ''
+		background: $mark
+	.step__el-val
+		background:black
+		color white
+		border-color black
+	.step__el-name
+		color black
+
+.step__el--active
+	pointer-events initial
+	.step__el-name
+		color black
+	.step__el-val
+		background:$mark
+		border-color $mark
+		color black
+// steps === end
+
+
+
+.order-form
+	width: 60%
+
+.order-condition
+	+below(960px)
+		width: 100%
+	width: calc(30% - 20px)
+	margin-left auto
+
+.form-block
+	margin-bottom: 10px
+
+.input-cont--extend
+	margin-bottom: 10px
+
+
+.direction--sm
+	display: grid
+	grid-column-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(14rem,1fr))
+.direction-el
+	padding: 25px 25px 25px 30px
+	br(20px)
+	cp()
+	border 1px solid $border-color
+	margin-bottom: 20px
+	position relative
+	overflow hidden
+	&:before
+		content ''
+		position absolute
+		top 0
+		left 0
+		width: 10px
+		height: 100%
+		background: $snow
+.direction-el__title
+	@extend .type--md
+	font-weight: 700
+	margin-bottom: 10px
+
+.direction-el.active
+	&:before
+		content ''
+		background: $mark
+
+.direction-el-add
+	f()
+	cp()
+	align-items center
+	margin-bottom: 30px
+	span
+		color $brown
+	.icon-block
+		margin-right: 20px
+
+// template nice-select
+.nice-select
+	br(20px)
+	display: block
+	color #000000
+	font-size 14px
+	font-weight 700
+	margin-bottom: 0
+	height: 55px
+	float none
+	f()
+	align-items center
+	padding: 10px 30px
+	&:after
+		content ''
+		size 7px
+		right: 20px
+	.list
+		width: 100%
+		left 0px
+		border-radius 0 0 20px 20px
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+		max-height 150px
+		overflow-y auto
+		li
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+		.current //max width dots
+			display block
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			max-width 100%
+			width: 100%
+			text-align: left
+
+.nice-select.open
+	border-radius 20px 20px 0 0
+
+select.select-beauty
+	display: none!important
+
+.element-select
+	padding: 20px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+// template nice-select === end
+
+.col-2
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(8rem,1fr))
+
+
+// range slider
+.range__wrap
+	margin-bottom 70px
+	margin-top: 30px
+	.irs-bar-edge
+		background $mark
+		height 15px
+		border-radius 10px 0px 0px 10px
+		width 25px
+	.irs-bar
+		height 15px
+		background $mark
+		br(10px)
+	.irs-line-left
+		height 15px
+		border-radius 10px 0px 0px 10px
+		background $snow
+	.irs-line-right
+		height 15px
+		background $snow
+		border-radius 0px 10px 10px 0px
+	.irs-line-mid
+		background $snow
+		height 15px
+	.irs-line
+		height 15px
+	.single
+		background: $mark
+		size 25px
+		br(5px)
+		top 20px
+	.irs-slider
+		width 45px
+		height 30px
+	.irs-min, .irs-max
+		display none
+	.irs-single
+		&:before
+			content ''
+			display none
+		top 55px
+		background transparent
+		color black
+		font-size: 18px
+	.irs--flat .irs-handle > i:first-child
+		display none
+	.irs--flat .irs-line
+		background: #F8F8F8
+		border 1px solid $border-color
+		border-radius 10px
+// range slider === end
+
+
+.range-head
+	flex(between)
+.range-title
+	@extend .type--lg
+	font-weight: 700
+.range-head__info
+	f()
+	align-items center
+	.icon
+		size 18px
+		fill $mark
+.range-head__val
+	@extend .type--lg
+	margin: 0 10px
+	color $red
+
+.order-total
+	+below(640px)
+		width: 100%
+		text-align center
+	border-top 1px solid $border-color
+	flex(between)
+	padding-top: 20px
+	margin: 20px 0
+.order-total__text
+	+below(640px)
+		text-align center
+		width: 100%
+	margin-right: 10px
+	@extend .type--lg
+	font-weight 700
+
+.order-total__val
+	+below(640px)
+		width: 100%
+		text-align center
+		font-size: 38px
+	@extend .type--xl
+	font-weight: 700
 
