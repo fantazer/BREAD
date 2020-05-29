@@ -1,0 +1,16 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		//product-cont
+		.main-cont
+			.page-error
+				.page-error__title Ошибка 500
+				.page-error__img
+					img(src="img/500.svg", alt="")
+				.page-error__text Сервер не может обработать запрос к сайту
+				a(href="#").page-error__get на главную
+	+footer()
+include ./block_html/_script.pug

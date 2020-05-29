@@ -22,17 +22,16 @@
 	visibility hidden
 
 .all-page__el
-	+below(768px)
-		width: 100%
-		margin-bottom: 20px
-	width 32%
 	padding 5px
 	bsh()
-	margin-bottom 30px
-
+	br(10px)
+	&:hover
+		bsh-hover()
 .all-page
-	flex(mid)
-	fw()
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
+	margin-bottom: 30px
 
 .elements-hr
 	margin: 40px 0

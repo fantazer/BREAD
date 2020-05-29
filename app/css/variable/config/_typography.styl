@@ -59,6 +59,9 @@ font-size 40px
 .type--gray
 	color $gray
 
+.type--red
+	color $red
+
 
 h1
 	@extend .type--xxl
@@ -82,9 +85,9 @@ a
 
 p
 	@extend .type--main
-
+	line-height: 1.6
 .link--mark
-	color $blue
+	color $brown
 	&:hover
 		color darken($mark,20)
 	&:visiter
@@ -108,13 +111,23 @@ p
 	color $mark
 
 .text
+	@extend .type--md
+	a
+		color $brown
 	p
 		line-height: 1.6
 		margin-bottom: 30px
+		@extend .type--md
 	ul
 		margin-bottom: 30px
 		li
+			@extend .type--md
 			line-height: 1.6
 			margin-bottom: 10px
 			&:last-child
 				margin-bottom: 0
+
+.text--extend
+	+below(768px)
+		padding-left: 0
+	padding-left: 80px

@@ -26,8 +26,10 @@ body
 	min-height 100vh
 
 .content
+	+below(1280px)
+		padding: 40px 0
 	flex-grow 1
-	padding: 120px 0
+	padding: 100px 0
 
 .content--clear
 	padding-top: 0
@@ -67,16 +69,30 @@ body
 
 
 .header
+	+below(1280px)
+		height: 50px
 	height: 90px
 	border-bottom 1px solid $border-color
 	f()
 	align-items: stretch
 	z-index 100
 .header-menu
+	+below(1440px)
+		width: auto
 	flex(mid)
 	width: 200px
 	border-right 1px solid $border-color
 .header-menu-btn
+	+below(1280px)
+		width: 100%
+		br(0)
+		height: 100%
+		flex(mid)
+	+below(640px)
+		padding: 0
+		width: 50px
+		span
+			display none
 	@extend .btn--red
 	@extend .btn--md
 	f()
@@ -84,10 +100,16 @@ body
 	padding: 12px 20px
 	line-height: 1
 	.icon
+		+below(640px)
+			margin-right: 0
 		fill white
 		size 20px
 		margin-right: 10px
 .header-nav
+	+below(1440px)
+		padding 0 1vw
+	+below(1280px)
+		display none
 	padding 0 2vw
 	width: 65%
 	flex(between)
@@ -105,6 +127,13 @@ body
 	&:hover
 		color $mark
 .header-logo
+	+below(1280px)
+		width: 170px
+		height: 70px
+	+below(768px)
+		height: 50px
+	+below(640px)
+		border 0
 	width: 14vw
 	height: 10vw
 	max-width 270px
@@ -116,6 +145,10 @@ body
 	border 1px solid $border-color
 	br(50%)
 	&:before
+		+below(1280px)
+			height: 48px
+		+below(640px)
+			display none
 		content ''
 		top 0
 		left -2px
@@ -126,11 +159,18 @@ body
 	img
 		z-index 5
 		width: 55%
+.header-logo--md
+	+below(1280px)
+		display none
 .header-logo--sm
+	+below(1280px)
+		display block
 	display none
 .header-contact
 	+below(1560px)
 		padding 0 1vw
+	+below(1280px)
+		display none
 	f()
 	align-items center
 	padding 0 2vw
@@ -138,6 +178,24 @@ body
 		fill $mark
 		size 24px
 		margin-right: 15px
+.header-contact-mobile
+	+above(1281px)
+		display none
+	flex(mid)
+	size 50px
+	border-right 1px solid $border-color
+	.icon
+		size 24px
+		fill $mark
+.header-nav-toggle
+	+above(1281px)
+		display none
+	flex(mid)
+	size 50px
+	border-left 1px solid $border-color
+	.icon
+		size 24px
+
 //.header-contact__info
 
 .header-contact__phone
@@ -160,12 +218,20 @@ body
 .header-auth
 	+below(1560px)
 		padding 0 1vw
+	+below(768px)
+		width: 50px
+		padding: 0
 	flex(mid)
 	cp()
 	border-left 1px solid $border-color
 	padding 0 2vw
 
 .header-auth-false
+	+below(1280px)
+		span
+			display none
+		.icon
+			margin-right: 0!important
 	f()
 	align-items center
 	.icon
@@ -177,14 +243,23 @@ body
 	align-items center
 //.hidden
 .user-img
+	+below(1280px)
+		margin-right: 0
+		size 30px
 	size 40px
 	br(5px)
 	bg-full()
 	margin-right: 15px
-//.user-name
+.user-name
+	+below(1280px)
+		display none
 .header-cart
 	+below(1560px)
 		padding 0 1vw
+	+below(1280px)
+		background: $red
+	+below(768px)
+		display none
 	f()
 	cp()
 	padding 0 2vw
@@ -192,14 +267,28 @@ body
 	align-items center
 .header-cart__icon
 	.icon
+		+below(1280px)
+			fill white
 		size 30px
 		fill $red
+	.is-open
+		size 20px
+		margin-left: 10px
 	margin-right: 15px
 .header-cart__val
+	+below(1280px)
+		color white
 	white-space nowrap
 	color $dark
 	@extend .type--md
 .header-cart__items
+	+below(1280px)
+		background: $mark
+		color black
+		size 20px
+		round()
+		font-size: 12px
+		margin-bottom: 15px
 	flex(mid)
 	background: $red
 	size 40px
@@ -219,8 +308,9 @@ body
 
 // slide menu
 .slide-block
-	+below(640px)
-		top: 90px //Высота хедера
+	+below(1280px)
+		top: 50px //Высота хедера
+		height: calc(100% - 50px)
 	+below(480px)
 		width: 100%
 	position: fixed
@@ -264,6 +354,41 @@ body
 	width:100%!important
 // slide menu === end
 
+
+.mobile-cart
+	+above(769px)
+		display none
+	position: fixed
+	bottom 20px
+	left calc(50% - 25px)
+	z-index 10
+	flex(mid)
+	br(20px)
+	background: $red
+	transition all .8s
+	.icon
+		size 24px
+		fill white
+
+.mobile-cart--hidden
+	transform translateY(200px)
+
+
+.mobile-cart-wrap
+	size 50px
+	position relative
+	flex(mid)
+	.mobile-cart__val
+		size 20px
+		background: $mark
+		flex(mid)
+		round()
+		position absolute
+		left calc(50% - 10px)
+		top -10px
+		font-size: 12px
+		font-weight: 700
+
 .is-open
 	display none
 
@@ -272,12 +397,9 @@ body
 		display none!important
 	.is-open
 		display block!important
-	.header-cart__items
-		span
+	.header-cart__icon
+		.is-close
 			display none
-		.icon
-			size 14px
-
 
 // header basket
 .basket-container
@@ -306,7 +428,6 @@ body
 	align-items: flex-start
 	+below(768px)
 		width: 100%
-	width: 55%
 .basket__img
 	+below(768px)
 		margin-right: 0
@@ -327,7 +448,7 @@ body
 	display block
 	f()
 	margin-bottom: 5px
-
+	width: 100%
 
 
 .basket__delete
@@ -379,6 +500,49 @@ body
 	line-height: 1.6
 	color $gray
 // header basket === end
+
+// slide menu nav
+.slide-menu-nav
+	padding: 30px
+	.header-location
+		margin-bottom: 20px
+		font-size: 16px
+		.icon
+			size 24px
+	.header-contact
+		display: flex !important
+.slide-menu-auth
+	cp()
+	margin-bottom: 20px
+
+.slide-menu-auth-false
+	+below(1280px)
+		span
+			display none
+		.icon
+			margin-right: 0!important
+	f()
+	align-items center
+	.icon
+		size 24px
+		fill $gray
+		margin-right: 15px
+.slide-menu-auth-true
+	f()
+	align-items center
+.slide-menu-user-img
+	size 30px
+	br(5px)
+	bg-full()
+	margin-right: 15px
+.slide-menu-nav__el
+	margin-bottom: 20px
+	display block
+	font-size: 16px
+.slide-menu-user-name
+	font-size: 16px
+// slide menu nav === end
+
 
 // incr
 .incr
@@ -471,6 +635,10 @@ body
 	user-select none
 	outline none
 .slider__el-img
+	+below(1280px)
+		padding: 20% 10%
+	+below(768px)
+		padding: 30% 10%
 	br(20px)
 	overflow hidden
 	bg-full()
@@ -479,8 +647,8 @@ body
 
 //=== Внешний вид пагинации ===
 .slick-dots
-	+below(720px)
-		bottom -20px
+	+below(768px)
+		bottom 10px
 	width: 100%
 	display: flex !important
 	align-items: center
@@ -491,9 +659,9 @@ body
 			size 10px
 			flex(mid)
 	.dot
-		+below(720px)
+		+below(768px)
 			flex(mid)
-			size 6px
+			size 10px
 		background: white
 		size 20px
 		display: block
@@ -509,6 +677,10 @@ body
 .slider-wrap
 	position relative
 .slider-control
+	+below(768px)
+		size 30px
+		br(10px)
+		margin-top: -15px
 	flex(mid)
 	tr(all)
 	position: absolute
@@ -524,6 +696,8 @@ body
 		.icon
 			fill $mark
 	.icon
+		+below(768px)
+			size 10px
 		size 14px
 .slider-control--left
 	left 14%
@@ -571,11 +745,7 @@ body
 	position: relative
 	f()
 	fl()
-	animation-duration: .8s
-	animation-fill-mode: both
-	animation-timing-function: ease-in-out
-	animation-iteration-count: 1
-	transform: translateZ(20px)
+
 
 .product-el--sm
 	.product-footer
@@ -589,11 +759,7 @@ body
 		width: initial
 	.product__title
 		text-align: center
-.product-el--hover
-	.product__title
-		color $mark
-	.product__img-el
-		transform scale(0.96)
+
 
 .product__img
 	margin-bottom: 20px
@@ -609,13 +775,11 @@ body
 	flex-grow 1
 
 .product__img-el
-	+below(640px)
-		padding: 35% 10%
 	tr(all)
 	width: 100%
 	height: 100%
 	bg-full()
-	background-size: contain
+	background-size: cover
 	padding: 50% 10%
 
 .product__title
@@ -628,23 +792,20 @@ body
 	&:hover
 		color #A57F45
 
+.product-box
+	margin-bottom:auto
+
 .product__text
-	+below(1024px)
-		opacity:1!important
-		left initial!important
-		height: auto !important
-		transform translateY(0)!important
-		margin: 15px 0!important
-	margin: 0 auto
 	opacity .8
-	margin-bottom: auto
 	line-height: 1.6
 	tr()
+	margin-bottom: 20px
 
 .product-cont
 	+below(1024px)
 		grid-template-columns: repeat(3, 1fr)
 		margin: 30px 0
+		grid-gap 20px
 	+below(640px)
 		grid-template-columns: repeat(2, 1fr)
 	+below(480px)
@@ -901,6 +1062,19 @@ body
 		&:last-child
 			border-radius 0 30px 30px 0
 
+.size--column
+	+below(640px)
+		fw()
+		.size__el
+			width: 100%
+			border-radius 30px!important
+
+.size--sm
+	display: inline-flex
+	.size__el
+		padding: 8px 20px
+
+
 .size--fluid
 	@extend .size--lg
 	f()
@@ -973,6 +1147,8 @@ body
 .title-row
 	+below(640px)
 		margin-bottom: 30px
+		flex-wrap nowrap
+		align-items: flex-start
 	position: relative
 	font-weight: 700
 	margin-bottom: 30px
@@ -982,8 +1158,6 @@ body
 	.icon
 		+below(768px)
 			size 25px
-		+below(640px)
-			display: none
 		tr(all)
 		size 50px
 		fill $mark
@@ -992,12 +1166,14 @@ body
 	.title
 		+below(640px)
 			width: 100%
-			margin-bottom: 10px
 			margin-right: 0
 		margin-bottom: 0
 		margin-right: 20px
 		margin-top: -5px
 	.arrow
+		+below(640px)
+			display none
+		fill $yellow
 		margin-right: 25px
 .arrow
 	flex(mid)
@@ -1029,13 +1205,19 @@ body
 	@extend .type--md
 	font-weight: 700
 	margin-bottom: 20px
+
 .title--lg
 	@extend .type--lg
 	font-weight: 700
 	position relative
 	line-height: 1
 	margin-bottom: 20px
-
+.title-tag
+	+below(480px)
+		display inline-block
+	background: $mark
+	padding: 5px
+	br(10px)
 .title-val
 	+below(640px)
 		display none
@@ -1048,6 +1230,8 @@ body
 .title__more
 	+below(767px)
 		margin-left: 0
+	+below(640px)
+		display none
 	font-weight: 400
 	@extend .type--md
 	margin-left: 20px
@@ -1055,7 +1239,22 @@ body
 	align-self flex-end
 	color $brown
 
-
+.title__more-mobile
+	+above(641px)
+		display none
+	border 2px solid $mark
+	br(15px)
+	flex(mid)
+	padding: 8px 12px
+	span
+		display inline-block
+		color $gray
+		margin-right: 5px
+		line-height: 1
+		font-size: 12px
+	.icon
+		size 12px
+		display: block !important
 // title templates === end
 
 .slider-gradient
@@ -1073,10 +1272,20 @@ body
 
 
 .footer
+	+below(960px)
+		fw()
+		padding: 20px
+		height: auto
 	f()
 	border-top 1px solid $border-color
 	align-items stretch
 	height: 90px
+	.pay-row
+		+below(960px)
+			order 2
+			border 0
+		+below(480px)
+			margin-bottom: 20px
 .pay-row
 	flex(between)
 	border-right 1px solid $border-color
@@ -1087,16 +1296,43 @@ body
 		margin-right: 20px
 		&:last-child
 			margin-right: 0
+
+.pay-row--line
+	border 0
+	margin-bottom: 30px
+	display: inline-flex
+	padding: 0
+
 .footer__nav
+	+below(960px)
+		order 1
+		width: 100%
+		justify-content: flex-start
+		margin-bottom: 20px
+	+below(480px)
+		fw()
+		margin-bottom: 0
 	padding 0 2vw
 	flex(between)
 .footer__nav-el
+	+below(1440px)
+		display none
 	margin-right: 20px
 	&:hover
 		color $brown
 .footer__nav-el--light
+	+below(1440px)
+		display block
+	+below(480px)
+		margin-bottom: 20px
 	color $gray
 .footer__create
+	+below(960px)
+		order 3
+		border 0
+	+below(480px)
+		margin-left 0
+		padding: 0
 	border-left 1px solid $border-color
 	padding 0 2vw
 	margin-left auto
@@ -1104,11 +1340,17 @@ body
 .jq
 	flex(mid)
 	span
+		+below(480px)
+			order 2
+			display inline-block
+			margin-left: 10px
 		display inline-block
 		margin-right: 20px
 
 // sale-list
 .sale-list
+	+below(640px)
+		grid-gap 20px
 	display: grid
 	grid-gap 40px
 	grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
@@ -1119,6 +1361,8 @@ body
 	padding: 32% 10%
 	br(20px)
 .sale-list__el-descr
+	+below(480px)
+		padding: 15px 0
 	padding: 15px
 	f()
 	justify-content space-between
@@ -1149,6 +1393,12 @@ body
 
 
 .sale-item-banner
+	+below(768px)
+		margin: 0 0 30px 0
+		padding: 20% 10%
+		br(0)
+		margin-left: -10px
+		width calc(100% + 20px)
 	bg-full()
 	br(20px)
 	padding: 15% 10%
@@ -1166,6 +1416,9 @@ body
 		margin-right: 10px
 
 .sale-descr
+	+below(768px)
+		padding-left: 0
+		margin-top: 0
 	padding-left: 75px
 	margin-top: -20px
 	margin-bottom: 50px
@@ -1194,6 +1447,9 @@ body
 
 
 .profile
+	+below(1024px)
+		margin-top: 50px
+
 	f()
 	fl()
 	br(10px)
@@ -1294,6 +1550,8 @@ body
 		size 20px
 		cp()
 .exit
+	+below(640px)
+		margin-bottom: 30px
 	f()
 	cp()
 	align-items center
@@ -1421,7 +1679,6 @@ body
 	overflow: hidden
 	padding-bottom 30px
 	+below(640px)
-		max-width 340px
 		margin-left: auto
 		margin-right: auto
 .history-card
@@ -1437,6 +1694,7 @@ body
 .history-card__wrap
 	+below(640px)
 		fw()
+		padding: 20px
 	cp()
 	f()
 	cp()
@@ -1459,6 +1717,7 @@ body
 .history-card__date
 	margin-bottom: 5px
 	+below(640px)
+		display none
 		margin-bottom: 10px
 .history-card__numb
 	color $brown
@@ -1467,11 +1726,11 @@ body
 
 .history-card__state
 	padding: 10px 15px
-	border 2px solid $mark
+	border 2px solid $gray
 	br(10px)
 	white-space nowrap
 .history-card__state--true
-	border 1px solid $gray
+	border 1px solid $mark
 .history-card__price
 	+below(640px)
 		margin-left:initial
@@ -1480,6 +1739,8 @@ body
 	margin-left: auto
 	@extend .type--lg
 .history-card__price_val
+	+below(640px)
+		margin-left auto
 	@extend .type--lg
 	font-weight 700
 
@@ -1489,6 +1750,9 @@ body
 	flex(between)
 	width: 40%
 .history-card__condition
+	+below(640px)
+		width: 100%
+		margin-top: 10px
 	flex(between)
 	width: 30%
 
@@ -1496,15 +1760,24 @@ body
 	display: block
 
 .history-info
+	+below(640px)
+		padding: 20px
 	background-color #ffffff
 	padding: 40px
 	display: none
 	border-radius 0 0 20px 20px
 	border-top 1px solid $border-color
 .history-info-wrap
+	+below(768px)
+		fw()
 	f()
 	justify-content space-between
 .history-info-col
+	+below(768px)
+		width: 100%
+		margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
 	width: 48%
 .history-info__el
 	margin-bottom: 20px
@@ -1516,7 +1789,7 @@ body
 	font-weight 700
 	margin-bottom: 10px
 .history-info__el-val
-	line-height: 1.2
+	line-height: 1.4
 	color $gray
 .goods-list
 	margin-bottom: 20px
@@ -1541,6 +1814,7 @@ body
 	width: 15%
 	text-align center
 .goods-list__el-cost
+	white-space nowrap
 	width: 20%
 	text-align: right
 	color $gray
@@ -1565,7 +1839,7 @@ body
 	+below(640px)
 		width: 100%
 		text-align center
-		font-size: 38px
+		font-size: 32px
 	@extend .type--lg
 	font-weight: 700
 .goods-get
@@ -1624,14 +1898,13 @@ body
 	f()
 	justify-content space-between
 	align-items: flex-start
-	margin-bottom: 100px
 	width: 100%
-
-
 
 .total
 	+below(960px)
 		width: 100%
+		max-width 640px
+		margin: 0 auto
 	width: calc(30% - 20px)
 	margin-left auto
 .total-title
@@ -1672,14 +1945,14 @@ body
 
 
 .order__el-info
-	+below(768px)
+	+below(640px)
 		fl()
 		justify-content center
 	f()
 	align-items center
 
 .order__el
-	+below(768px)
+	+below(640px)
 		fw()
 		flex(mid)
 		fl()
@@ -1691,10 +1964,10 @@ body
 	margin-bottom: 10px
 	border-bottom 1px solid $border-color
 .order__img
-	+below(768px)
+	+below(640px)
 			margin-right: 0
-			height: 100px
-			width: 100px
+			height: 150px
+			width: 150px
 	size 70px
 	br(5px)
 	bg-full()
@@ -1708,7 +1981,7 @@ body
 	display block*/
 
 .order__name-text
-	+below(768px)
+	+below(640px)
 			font-size: 20px
 			margin-bottom: 20px
 			text-align: center
@@ -1721,17 +1994,22 @@ body
 	&:hover
 			color $mark
 .order__adds
-	+below(768px)
+	+below(640px)
 		width: 100%
 		text-align center
-
+		margin-bottom: 10px
 .order__el-change
-	+below(768px)
+	+below(640px)
 		width: 100%
 		fl()
 	f()
 	align-items center
 	width: 35%
+
+.order__inc
+	+below(640px)
+		.incr
+			width: auto
 
 .order__price
 	+below(768px)
@@ -1743,11 +2021,11 @@ body
 	@extend .type--lg
 	white-space nowrap
 .order__delete
-	+below(768px)
+	+below(640px)
 		position absolute
 		top 0
 		right: 0
-	margin-left: auto
+	margin-left: 20px
 	.icon
 		cp()
 		tr(all)
@@ -1767,12 +2045,20 @@ body
 		grid-template-columns: repeat(3, 1fr)
 	+below(640px)
 		grid-template-columns: repeat(2, 1fr)
+		margin-bottom: 0
 	+below(480px)
 		grid-template-columns: 1fr
 	display: grid
 	grid-gap 40px
 	grid-template-columns: repeat(4, 1fr)
 	margin-bottom: 80px
+
+.order-add--sm
+	grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+
+
+.order__el-wrap
+	margin-bottom: 60px
 
 // ==== ORDER ==== === end
 
@@ -1832,6 +2118,9 @@ body
 
 
 .order-form
+	+below(1024px)
+		width: 100%
+		margin-bottom: 40px
 	width: 60%
 
 .order-condition
@@ -1845,6 +2134,7 @@ body
 
 .input-cont--extend
 	margin-bottom: 10px
+	line-height: 1.4
 
 
 .direction--sm
@@ -1950,6 +2240,9 @@ select.select-beauty
 .range__wrap
 	margin-bottom 70px
 	margin-top: 30px
+	position relative
+	.irs-hidden-input
+		display none!important
 	.irs-bar-edge
 		background $mark
 		height 15px
@@ -2000,8 +2293,13 @@ select.select-beauty
 
 
 .range-head
+	+below(640px)
+		fw()
 	flex(between)
 .range-title
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	@extend .type--lg
 	font-weight: 700
 .range-head__info
@@ -2039,3 +2337,453 @@ select.select-beauty
 	@extend .type--xl
 	font-weight: 700
 
+.deliver
+	+below(740px)
+		fw()
+	f()
+	justify-content space-between
+	align-items: flex-start
+	margin-bottom: 30px
+.deliver-map
+	+below(740px)
+		width: 100%
+		margin-bottom: 30px
+	br(20px)
+	overflow hidden
+	position relative
+	padding: 25% 10%
+	width: calc(100% - 400px)
+.deliver-map__el
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: $snow
+.deliver-info
+	+below(740px)
+		width: 100%
+	width: 350px
+.deliver-time
+	+below(640px)
+		.type--md
+			font-size: 12px
+	br(20px)
+	f()
+	border-radius 20px
+	background-color #f8f8f8
+	padding: 20px 25px
+	align-items center
+	margin-bottom: 20px
+.deliver-type
+	margin-bottom: 20px
+.deliver-type__el
+	f()
+	align-items center
+	margin-bottom: 10px
+.deliver-type__color
+	height: 30px
+	width: 6px
+	br(5px)
+	margin-right: 20px
+.deliver-type__val
+	+below(640px)
+		font-size: 14px
+	@extend .type--md
+	width: 130px
+.deliver-banner
+	padding: 20px
+	border 2px solid $mark
+	br(20px)
+.deliver-banner__title
+	@extend .type--lg
+	font-weight: 700
+	margin-bottom: 10px
+
+// about
+.about
+	+below(640px)
+		fw()
+	f()
+	justify-content space-between
+	align-items: flex-start
+	margin-bottom: 30px
+.about-map
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+		padding: 40% 10%
+	br(20px)
+	overflow hidden
+	position relative
+	padding: 15% 10%
+	width: calc(100% - 380px)
+.about-map__el
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: $snow
+.about-info
+	width: 350px
+	p
+		margin: 10px
+// about === end
+
+// error
+.page-error
+	flex(mid)
+	fl()
+.page-error__title
+	@extend .type--xxl
+	margin-bottom: 30px
+	font-weight: 700
+	color $gray
+.page-error__img
+	margin-bottom: 30px
+.page-error__text
+	@extend .type--md
+	color $gray
+	margin-bottom: 30px
+.page-error__get
+	@extend .btn--md
+	@extend .btn--mark
+// error === end
+
+// modal
+//modal
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+	max-height 100%
+	overflow: auto
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: #18191da1
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal
+	+below(768px)
+		width: 100%
+		box-shadow 0 0 0
+	transform scale(.9)
+	position: absolute
+	opacity 0
+	transition transform .6s, opacity .8s
+	max-width 420px
+	z-index -1
+	left -9999px
+	.order__row
+		margin-bottom: 20px
+		border-bottom 0
+
+.modal-content
+	+below(640px)
+		height: 100%
+		padding: 20px
+		overflow-y scroll
+		width: 95%!important
+		margin: 20px auto
+	background: white
+	position: relative
+	padding: 40px 45px
+	br(40px)
+
+.modal-content--sm
+	padding: 20px
+
+.modal-content--md
+	padding: 60px 35px 35px 35px
+
+
+.modal-content--dark
+	background: black
+	.modal-title
+		color white
+	.modal-text
+		color white
+
+.modal__show
+	max-height 100%
+	opacity 1
+	transform scale(1)
+	position: relative
+	z-index 1000
+	left initial
+.modal-close
+	+below(768px)
+		top 12px
+		right 12px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	size 50px
+	br(20px)
+	flex(mid)
+	z-index 10
+	background: #f8f8f8
+	&:hover
+		.icon
+			opacity: 1
+	.icon
+		tr()
+		size 12px
+		fill black
+		opacity:.3
+
+.modal-open
+	overflow: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-wrap
+	position: fixed
+	width: 100%
+	height: 100%
+	overflow-y auto
+	flex(mid)
+
+.modal-title
+	+below(768px)
+		font-size: 20px
+	margin-bottom: 20px
+	text-align: center
+	@extend .type--xl
+	font-weight: 700
+
+.modal-text
+	+below(768px)
+		width: 100%
+		font-size: 12px
+	text-align: center
+	margin: 20px auto
+	//width: 80%
+	line-height: 1.6
+
+.validate-form
+	input,textarea
+		width: 100%
+		margin-bottom: 20px
+
+.modal-send
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+
+
+.modal-content--true
+	flex(mid)
+	fl()
+	br(10px)
+	.icon
+		fill green
+		size 120px
+		margin-bottom: 20px
+
+.modal-text-true
+	text-align: center
+	font-weight: 700
+	@extend .type--lg
+
+.modal-link
+	color $brown
+	border-bottom 1px dashed $brown
+	display table
+	margin: 20px auto 0 auto
+	cp()
+.modal-link--auth
+	margin: 0
+	margin-top: -10px
+	margin-bottom: 20px
+	cp()
+.modal-img
+	margin: 0 auto 20px auto
+	flex(mid)
+// modal === end
+.location-list-wrap
+	position relative
+	&:before
+		z-index 10
+		content ""
+		position absolute
+		bottom -15px
+		left 0
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+		width: 100%
+		height: 50px
+
+.location-list
+	max-height 300px
+	position relative
+	padding-right: 40px
+	width calc(100% + 40px)
+	margin-right: -40px
+
+.location-list__el
+	@extend .btn--md
+	@extend .btn--white
+	font-size: 15px
+	display block
+	margin-bottom: 10px
+.location-list__el--active
+	background: $mark
+
+
+.cookie
+	position: fixed
+	bottom 20px
+	left 0
+	width: 100%
+	transform translateY(10px)
+	opacity: 0
+	z-index -1
+	tr()
+.cookie--active
+	z-index 20
+	opacity: 1
+	transform translateY(0)
+.cookie-wrap
+	bsh()
+	padding: 15px 20px
+	br(20px)
+	z-index 10
+	background: white
+	f()
+	justify-content: space-between
+	.icon
+		&:hover
+			fill black
+		tr()
+		size 14px
+		margin-left: 10px
+		fill $gray
+		cp()
+.cookie-text
+	width calc(100% - 30px)
+
+// modal item
+//.modal-content
+
+.modal-hide-animation
+	transform scale(.9)
+	opacity 0
+	transition transform .6s, opacity .8s
+
+.modal--lg
+	+below(960px)
+		width: 100%
+		max-width 100%
+	width 880px
+	max-width 880px
+.item-mobile
+	+below(640px)
+		fw()
+	f()
+	justify-content space-between
+	align-items: flex-start
+.item-mobile__img
+	+below(640px)
+		width: 100%
+		padding: 50% 10%
+	width: 45%
+	bg-full()
+	padding: 20% 10%
+	position relative
+	br(20px)
+	.product-el--add
+		left 10px
+		right initial
+.item-mobile__info
+	+below(640px)
+		width: 100%
+		padding-right: 0
+	width: 50%
+	padding-right: 50px
+.item-mobile__title
+	+below(480px)
+		font-size: 26px
+	margin-top: 30px
+	@extend .type--xl
+	font-weight 700
+	margin-bottom: 10px
+.item-mobile__descr
+	@extend .type--md
+	line-height: 1.6
+	margin-bottom: 10px
+
+.item-mobile-footer
+	f()
+	align-items center
+	margin: 20px 0
+.item-mobile-price
+	@extend .type--xl
+	font-weight 700
+	margin-right: 10px
+.item-mobile-weight
+	color $gray
+	margin-right auto
+.structure
+	+below(480px)
+		grid-template-columns: repeat(2, 1fr)
+	display: grid
+	grid-gap 10px
+	grid-template-columns: repeat(4, 1fr)
+	margin-bottom: 10px
+.structure__el
+	padding: 10px 5px
+	border 1px solid $border-color
+	br(20px)
+	flex(mid)
+	fl()
+.structure__el-name
+	@extend .type--sm
+.structure__el-val
+	@extend .type--md
+.structure-text
+	+below(480px)
+		text-align center
+	text-align: right
+	@extend .type--sm
+	margin-bottom: 30px
+// modal item === end
+
+
+.modal-bonus
+	position relative
+	max-height 500px
+	padding-right: 20px
+	margin-right: -20px
+	width calc(100% + 20px)
+
+
+.product-more
+	+above(641px)
+		display none

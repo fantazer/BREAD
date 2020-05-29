@@ -7,6 +7,8 @@ mixin header()
 					+icon("chef","icon is-close")
 					+icon("close","icon is-open")
 					span Меню
+			a(href="tel:8 495 123 45 67").header-contact-mobile
+				+icon("phone","icon")
 			.header-nav
 				.header-location
 					+icon("location","icon")
@@ -30,13 +32,16 @@ mixin header()
 				.header-auth-true
 					.user-img(style="background-image:url('img/user.jpg')")
 					.user-name Александр
+			.header-nav-toggle.js-slide-block-toggle(data-menu="nav")
+				+icon("menu","icon is-close")
+				+icon("close","icon is-open")
 			.header-cart.js-slide-block-toggle(data-menu="cart")
 				.header-cart__icon
-					+icon("cart","icon")
+					+icon("cart","icon is-close")
+					+icon("close","icon is-open")
 				.header-cart__val 1249 р
 				.header-cart__items
 					span 6
-					+icon("close","icon is-open")
 
 		//slide block cart
 		.slide-block.slide-block--left.slide-block--menu(data-menu="menu")
@@ -65,7 +70,7 @@ mixin header()
 								.basket__img(style="background-image:url('img/item-sm-1.jpg')")
 								.basket__cont
 									.basket__name
-										a(href="#") Хлеб Белый  #{i + 1}
+										a(href="#").basket__name-el Хлеб Белый  #{i + 1}
 										.basket__delete
 											+icon("trash","icon")
 									.basket__descr 435 г
@@ -79,6 +84,26 @@ mixin header()
 						.basket-total__val 2 425 р
 					.basket-total-get Оформить заказ
 						// add class .btn--disable for empty basket
-
-
+		//slide block cart
+		.slide-block.slide-block--right.slide-block--menu(data-menu="nav")
+			.slide-block-wrap.scroll
+				.slide-menu-nav
+					.header-location
+						+icon("location","icon")
+						span Кемерово
+					.slide-menu-auth
+						.slide-menu-auth-false.hidden
+							+icon("user","icon")
+							span Войти
+						.slide-menu-auth-true
+							.slide-menu-user-img(style="background-image:url('img/user.jpg')")
+							.slide-menu-user-name Александр
+					a(href="#").slide-menu-nav__el Акции
+					a(href="#").slide-menu-nav__el Доставка и оплата
+					a(href="#").slide-menu-nav__el О нас
+					.header-contact
+						+icon("phone","icon")
+						.header-contact__info
+							a(href="tel:8 495 123 45 67").header-contact__phone 8 495 123 45 67
+							.header-contact__time заказывайте с 10 до 20
 	//block header end

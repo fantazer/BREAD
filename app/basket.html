@@ -43,6 +43,11 @@
                         <span>Меню</span>
                     </div>
                 </div>
+                <a class="header-contact-mobile" href="tel:8 495 123 45 67">
+                    <svg class="icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                </a>
                 <div class="header-nav">
                     <div class="header-location">
                         <svg class="icon">
@@ -81,18 +86,26 @@
                         <div class="user-name">Александр</div>
                     </div>
                 </div>
+                <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                    <svg class="icon is-close">
+                        <use xlink:href="#menu"></use>
+                    </svg>
+                    <svg class="icon is-open">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
                 <div class="header-cart js-slide-block-toggle" data-menu="cart">
                     <div class="header-cart__icon">
-                        <svg class="icon">
+                        <svg class="icon is-close">
                             <use xlink:href="#cart"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
                         </svg>
                     </div>
                     <div class="header-cart__val">1249 р</div>
                     <div class="header-cart__items">
                         <span>6</span>
-                        <svg class="icon is-open">
-                            <use xlink:href="#close"></use>
-                        </svg>
                     </div>
                 </div>
             </div>
@@ -142,7 +155,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 1</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 1</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -181,7 +194,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 2</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 2</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -220,7 +233,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 3</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 3</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -259,7 +272,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 4</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 4</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -298,7 +311,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 5</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 5</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -337,7 +350,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 6</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 6</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -376,7 +389,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 7</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 7</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -415,7 +428,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 8</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 8</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -454,7 +467,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 9</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 9</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -500,6 +513,43 @@
                     </div>
                 </div>
             </div>
+            <!--slide block cart-->
+            <div class="slide-block slide-block--right slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap scroll">
+                    <div class="slide-menu-nav">
+                        <div class="header-location">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <span>Кемерово</span>
+                        </div>
+                        <div class="slide-menu-auth">
+                            <div class="slide-menu-auth-false hidden">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <span>Войти</span>
+                            </div>
+                            <div class="slide-menu-auth-true">
+                                <div class="slide-menu-user-img" style="background-image:url('img/user.jpg')"></div>
+                                <div class="slide-menu-user-name">Александр</div>
+                            </div>
+                        </div>
+                        <a class="slide-menu-nav__el" href="#">Акции</a>
+                        <a class="slide-menu-nav__el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu-nav__el" href="#">О нас</a>
+                        <div class="header-contact">
+                            <svg class="icon">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            <div class="header-contact__info">
+                                <a class="header-contact__phone" href="tel:8 495 123 45 67">8 495 123 45 67</a>
+                                <div class="header-contact__time">заказывайте с 10 до 20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--block header end-->
         <div class="content">
@@ -509,40 +559,286 @@
                 <div class="order">
                     <div class="order-cont">
                         <div class="order-item">
-                            <div class="order__el">
-                                <div class="order__el-info">
-                                    <a class="order__img" href="#" style="background-image:url('img/item-sm-3.jpg')"></a>
-                                    <div class="order__name">
-                                        <a class="order__name-text" href="#">Хлеб беларусское чудо</a>
-                                        <div class="order__adds">450 г</div>
+                            <div class="order__el-wrap">
+                                <div class="order__el">
+                                    <div class="order__el-info">
+                                        <a class="order__img" href="#" style="background-image:url('img/item-sm-3.jpg')"></a>
+                                        <div class="order__name">
+                                            <a class="order__name-text" href="#">Хлеб беларусское чудо</a>
+                                            <div class="order__adds">450 г</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="order__el-change">
-                                    <div class="order__inc">
-                                        <div class="elements-icr-block">
-                                            <div class="incr">
-                                                <div class="incr__minus incr__nav">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#minus"></use>
-                                                    </svg>
-                                                </div>
-                                                <div class="incr__val">
-                                                    <span>1</span>
-                                                    <div class="incr__val-coner"></div>
-                                                </div>
-                                                <div class="incr__plus incr__nav">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#plus"></use>
-                                                    </svg>
+                                    <div class="order__el-change">
+                                        <div class="order__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="order__price">120 р.</div>
+                                        <div class="order__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
                                     </div>
-                                    <div class="order__price">120 р.</div>
-                                    <div class="order__delete">
+                                </div>
+                                <div class="order__el">
+                                    <div class="order__el-info">
+                                        <a class="order__img" href="#" style="background-image:url('img/item-sm-3.jpg')"></a>
+                                        <div class="order__name">
+                                            <a class="order__name-text" href="#">Хлеб беларусское чудо</a>
+                                            <div class="order__adds">450 г</div>
+                                        </div>
+                                    </div>
+                                    <div class="order__el-change">
+                                        <div class="order__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__price">120 р.</div>
+                                        <div class="order__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__el">
+                                    <div class="order__el-info">
+                                        <a class="order__img" href="#" style="background-image:url('img/item-sm-3.jpg')"></a>
+                                        <div class="order__name">
+                                            <a class="order__name-text" href="#">Хлеб беларусское чудо</a>
+                                            <div class="order__adds">450 г</div>
+                                        </div>
+                                    </div>
+                                    <div class="order__el-change">
+                                        <div class="order__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__price">120 р.</div>
+                                        <div class="order__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__el">
+                                    <div class="order__el-info">
+                                        <a class="order__img" href="#" style="background-image:url('img/item-sm-3.jpg')"></a>
+                                        <div class="order__name">
+                                            <a class="order__name-text" href="#">Хлеб беларусское чудо</a>
+                                            <div class="order__adds">450 г</div>
+                                        </div>
+                                    </div>
+                                    <div class="order__el-change">
+                                        <div class="order__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__price">120 р.</div>
+                                        <div class="order__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__el">
+                                    <div class="order__el-info">
+                                        <a class="order__img" href="#" style="background-image:url('img/item-sm-3.jpg')"></a>
+                                        <div class="order__name">
+                                            <a class="order__name-text" href="#">Хлеб беларусское чудо</a>
+                                            <div class="order__adds">450 г</div>
+                                        </div>
+                                    </div>
+                                    <div class="order__el-change">
+                                        <div class="order__inc">
+                                            <div class="elements-icr-block">
+                                                <div class="incr">
+                                                    <div class="incr__minus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#minus"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="incr__val">
+                                                        <span>1</span>
+                                                        <div class="incr__val-coner"></div>
+                                                    </div>
+                                                    <div class="incr__plus incr__nav">
+                                                        <svg class="icon">
+                                                            <use xlink:href="#plus"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__price">120 р.</div>
+                                        <div class="order__delete">
+                                            <svg class="icon">
+                                                <use xlink:href="#trash"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title">Рекомендуем к заказу</div>
+                            <div class="order-add order-add--sm">
+                                <div class="product-el">
+                                    <div class="product-el--add">
                                         <svg class="icon">
-                                            <use xlink:href="#trash"></use>
+                                            <use xlink:href="#cart-empty"></use>
                                         </svg>
+                                        <div class="product-el--add-val">2</div>
+                                    </div>
+                                    <div class="product__img">
+                                        <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                    </div>
+                                    <div class="product__cont">
+                                        <div class="product__title">Хлеб беларусское чудо</div>
+                                        <div class="product-box">
+                                            <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                        </div>
+                                        <div class="size">
+                                            <div class="size__el size__el--active">350 г</div>
+                                            <div class="size__el">500 г</div>
+                                            <div class="size__el">750 г</div>
+                                        </div>
+                                        <div class="product-footer">
+                                            <div class="product-price">860 р.</div>
+                                            <div class="product-weight">300 гр</div>
+                                            <div class="item-add">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-el">
+                                    <div class="product-el--add">
+                                        <svg class="icon">
+                                            <use xlink:href="#cart-empty"></use>
+                                        </svg>
+                                        <div class="product-el--add-val">2</div>
+                                    </div>
+                                    <div class="product__img">
+                                        <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                    </div>
+                                    <div class="product__cont">
+                                        <div class="product__title">Хлеб беларусское чудо</div>
+                                        <div class="product-box">
+                                            <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                        </div>
+                                        <div class="size">
+                                            <div class="size__el size__el--active">350 г</div>
+                                            <div class="size__el">500 г</div>
+                                            <div class="size__el">750 г</div>
+                                        </div>
+                                        <div class="product-footer">
+                                            <div class="product-price">860 р.</div>
+                                            <div class="product-weight">300 гр</div>
+                                            <div class="item-add">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-el">
+                                    <div class="product-el--add">
+                                        <svg class="icon">
+                                            <use xlink:href="#cart-empty"></use>
+                                        </svg>
+                                        <div class="product-el--add-val">2</div>
+                                    </div>
+                                    <div class="product__img">
+                                        <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
+                                    </div>
+                                    <div class="product__cont">
+                                        <div class="product__title">Хлеб беларусское чудо</div>
+                                        <div class="product-box">
+                                            <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                        </div>
+                                        <div class="size">
+                                            <div class="size__el size__el--active">350 г</div>
+                                            <div class="size__el">500 г</div>
+                                            <div class="size__el">750 г</div>
+                                        </div>
+                                        <div class="product-footer">
+                                            <div class="product-price">860 р.</div>
+                                            <div class="product-weight">300 гр</div>
+                                            <div class="item-add">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -581,40 +877,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="title">Рекомендуем к заказу</div>
-                <div class="order-add">
-                    <div class="product-el">
-                        <div class="product-el--add">
-                            <svg class="icon">
-                                <use xlink:href="#cart-empty"></use>
-                            </svg>
-                            <div class="product-el--add-val">2</div>
-                        </div>
-                        <a class="product__img" href="#">
-                            <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
-                        <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
-                            <div class="product-box">
-                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
-                            </div>
-                            <div class="size">
-                                <div class="size__el size__el--active">350 г</div>
-                                <div class="size__el">500 г</div>
-                                <div class="size__el">750 г</div>
-                            </div>
-                            <div class="product-footer">
-                                <div class="product-price">860 р.</div>
-                                <div class="product-weight">300 гр</div>
-                                <div class="item-add">
-                                    <svg class="icon">
-                                        <use xlink:href="#plus"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!--block footer-->
@@ -640,6 +902,14 @@
                 </a>
             </div>
         </div>
+        <a class="mobile-cart" href="#">
+            <div class="mobile-cart-wrap">
+                <div class="mobile-cart__val">12</div>
+                <svg class="icon">
+                    <use xlink:href="#cart"></use>
+                </svg>
+            </div>
+        </a>
         <!--block footer end-->
     </div>
     <!--build:js ./js/combined.js-->

@@ -35,6 +35,11 @@
                         <span>Меню</span>
                     </div>
                 </div>
+                <a class="header-contact-mobile" href="tel:8 495 123 45 67">
+                    <svg class="icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                </a>
                 <div class="header-nav">
                     <div class="header-location">
                         <svg class="icon">
@@ -73,18 +78,26 @@
                         <div class="user-name">Александр</div>
                     </div>
                 </div>
+                <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                    <svg class="icon is-close">
+                        <use xlink:href="#menu"></use>
+                    </svg>
+                    <svg class="icon is-open">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
                 <div class="header-cart js-slide-block-toggle" data-menu="cart">
                     <div class="header-cart__icon">
-                        <svg class="icon">
+                        <svg class="icon is-close">
                             <use xlink:href="#cart"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
                         </svg>
                     </div>
                     <div class="header-cart__val">1249 р</div>
                     <div class="header-cart__items">
                         <span>6</span>
-                        <svg class="icon is-open">
-                            <use xlink:href="#close"></use>
-                        </svg>
                     </div>
                 </div>
             </div>
@@ -134,7 +147,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 1</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 1</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -173,7 +186,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 2</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 2</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -212,7 +225,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 3</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 3</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -251,7 +264,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 4</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 4</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -290,7 +303,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 5</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 5</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -329,7 +342,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 6</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 6</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -368,7 +381,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 7</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 7</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -407,7 +420,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 8</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 8</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -446,7 +459,7 @@
                                 <div class="basket__img" style="background-image:url('img/item-sm-1.jpg')"></div>
                                 <div class="basket__cont">
                                     <div class="basket__name">
-                                        <a href="#">Хлеб Белый 9</a>
+                                        <a class="basket__name-el" href="#">Хлеб Белый 9</a>
                                         <div class="basket__delete">
                                             <svg class="icon">
                                                 <use xlink:href="#trash"></use>
@@ -488,6 +501,43 @@
                         </div>
                         <div class="basket-total-get">Оформить заказ
                             <!-- add class .btn--disable for empty basket-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--slide block cart-->
+            <div class="slide-block slide-block--right slide-block--menu" data-menu="nav">
+                <div class="slide-block-wrap scroll">
+                    <div class="slide-menu-nav">
+                        <div class="header-location">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            <span>Кемерово</span>
+                        </div>
+                        <div class="slide-menu-auth">
+                            <div class="slide-menu-auth-false hidden">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <span>Войти</span>
+                            </div>
+                            <div class="slide-menu-auth-true">
+                                <div class="slide-menu-user-img" style="background-image:url('img/user.jpg')"></div>
+                                <div class="slide-menu-user-name">Александр</div>
+                            </div>
+                        </div>
+                        <a class="slide-menu-nav__el" href="#">Акции</a>
+                        <a class="slide-menu-nav__el" href="#">Доставка и оплата</a>
+                        <a class="slide-menu-nav__el" href="#">О нас</a>
+                        <div class="header-contact">
+                            <svg class="icon">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            <div class="header-contact__info">
+                                <a class="header-contact__phone" href="tel:8 495 123 45 67">8 495 123 45 67</a>
+                                <div class="header-contact__time">заказывайте с 10 до 20</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -562,6 +612,12 @@
                         <div class="title-val">15</div>
                     </div>
                     <a class="title__more" href="#">Смотреть все товары</a>
+                    <a class="title__more-mobile" href="#">
+                        <span>23</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-conner-right"></use>
+                        </svg>
+                    </a>
                 </div>
                 <div class="product-cont">
                     <div class="product-el">
@@ -571,11 +627,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -602,11 +658,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -633,11 +689,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -664,11 +720,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -695,11 +751,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -726,11 +782,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -757,11 +813,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -788,11 +844,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -819,11 +875,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -850,11 +906,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -881,11 +937,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -912,11 +968,11 @@
                             </svg>
                             <div class="product-el--add-val">2</div>
                         </div>
-                        <a class="product__img" href="#">
+                        <div class="product__img">
                             <div class="product__img-el" style="background-image:url('img/item-sm-1.jpg')"></div>
-                        </a>
+                        </div>
                         <div class="product__cont">
-                            <a class="product__title" href="#">Хлеб беларусское чудо</a>
+                            <div class="product__title">Хлеб беларусское чудо</div>
                             <div class="product-box">
                                 <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
                             </div>
@@ -936,6 +992,7 @@
                             </div>
                         </div>
                     </div>
+                    <a class="product-more btn--md btn--mark btn--mobile" href="#">смотреть еще</a>
                 </div>
             </div>
         </div>
@@ -962,6 +1019,14 @@
                 </a>
             </div>
         </div>
+        <a class="mobile-cart" href="#">
+            <div class="mobile-cart-wrap">
+                <div class="mobile-cart__val">12</div>
+                <svg class="icon">
+                    <use xlink:href="#cart"></use>
+                </svg>
+            </div>
+        </a>
         <!--block footer end-->
     </div>
     <script src="./js/combined.js"></script>

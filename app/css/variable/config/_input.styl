@@ -12,6 +12,11 @@
 	tr(all)
 	&:focus
 		background: white
+		border-color $mark
+
+.input--disable
+	@extend .disabled
+	background: $border-color
 
 .style-label
 	display flex
@@ -111,6 +116,8 @@
 	display none
 
 .input-cont
+	+below(640px)
+		grid-row-gap 0
 	display: grid
 	grid-gap 20px
 	.style-label
@@ -136,8 +143,9 @@
 	.style-input-text
 		font-size: 12px
 		color black
-		width: calc(100% - 80px)
+		width: calc(100% - 50px)
 		line-height: 1.6
+		margin-top: 3px
 		a
 			color $brown
 			border-bottom 1px dashed brown

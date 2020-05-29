@@ -2,6 +2,220 @@ mixin modal()
 	.modal-layer
 		.modal-filter
 		.modal-wrap
+			// phone enter
+			.modal(data-modal="enter")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход на сайт
+					.modal-text Введите свой номер и код подтверждения будет отправлен по СМС в течение #[span.type--red 60 секунд]
+					.input-row
+						input(type="text" name="name" placeholder="+7 (XXX) XXX-XX-XX").input
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon-check")
+								.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
+
+					input(type="submit" value="Получить код").modal-send
+			// phone enter === end
+
+			// phone sms
+			.modal(data-modal="sms")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход на сайт
+					.modal-text Введите код подтверждения, чтобы войти в личный кабинет
+					.input-row
+						input(type="text" name="name" placeholder="Код из СМС").input
+					input(type="submit" value="Войти").modal-send
+					a(href="#").modal-link Отправить код еще раз
+			// phone sms === end
+
+			// phone location
+			.modal(data-modal="location")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Ваш город
+					.modal-text Выберите свой город для отображения актуальных товаров и цен
+					.location-list-wrap
+						.location-list.scroll
+							.location-list__el.location-list__el--active Кемерово
+							- for(var i=0;i<4;i++)
+								.location-list__el Москва
+								.location-list__el Санкт-Петербург
+								.location-list__el Волгоград
+			// phone location === end
+
+			// phone location
+			.modal(data-modal="bad-action")
+				.modal-content.modal-content--dark
+					.modal-img
+						img(src="img/sleep.svg", alt="")
+					.modal-title Сейчас доставка не работает
+					.modal-text Мы откроемся завтра в 9 утра. Вы можете оформить заказ на завтра.
+					input(type="submit" value="Хорошо").btn--md.btn--light.btn--full.modal-hide
+			// phone location === end
+
+			// phone location
+			.modal(data-modal="true-action")
+				.modal-content
+					.modal-img
+						img(src="img/cake.svg", alt="")
+					.modal-title Благодарим вас за заказ!
+					.modal-text Ваш заказ #[span.type--bold №9854]&nbsp;будет приготовлен и доставлен к вам в течение #[span.type--bold 40 минут]
+					input(type="submit" value="С нетерпением жду!").btn--md.btn--mark.btn--full.modal-hide
+			// phone location === end
+
+			// item
+			.modal.modal--lg(data-modal="item")
+				.modal-content.modal-content--sm
+					.modal-close
+						+icon("close","icon")
+					.item-mobile
+						.item-mobile__img(style="background-image:url('img/item-full.jpg')")
+							.product-el--add
+								+icon("cart-empty","icon")
+								.product-el--add-val 2
+						.item-mobile__info
+							.item-mobile__title Хлеб беларусское чудо
+							.item-mobile__descr Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда
+							.size.size--sm
+								.size__el.size__el--active 350 г
+								.size__el 500 г
+								.size__el 750 г
+							.item-mobile-footer
+								.item-mobile-price 860 р.
+								.item-mobile-weight 300 гр
+								.item-add
+									+icon("plus","icon")
+							.structure
+								.structure__el
+									.structure__el-name калории
+									.structure__el-val 2841
+								.structure__el
+									.structure__el-name белки
+									.structure__el-val 75,4
+								.structure__el
+									.structure__el-name жиры
+									.structure__el-val 111,5
+								.structure__el
+									.structure__el-name углеводы
+									.structure__el-val 198,2
+							.structure-text энергетическая ценность указана за 100 г
+			// item === end
+
+			// profile
+			.modal(data-modal="profile")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Личные данные
+					.modal-text Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях
+					.input-row
+						input(type="text" name="name" placeholder="Телефон" value="+7(926)182-38-34").input.input--disable
+					.modal-link.modal-link--auth войти под другим номером
+					.input-row
+						input(type="text" name="name" placeholder="Имя").input
+					.input-row
+						input(type="text" name="name" placeholder="E-mail").input
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon-check")
+								.style-input-text информировать о скидках и акциях
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								option(data-display="Число") Не выбрано
+								- for (var i=0;i<20;i++)
+									option 25
+						.input-row
+							select.select-beauty
+								option(data-display="Месяц") Не выбрано
+								- for (var i=0;i<20;i++)
+									option Январь
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								option(data-display="Год") Не выбрано
+								- for (var i=0;i<20;i++)
+									option 1984
+						.input-row.input-row--middle
+							.type--sm будьте внимательны, день рождения нельзя изменить
+					input(type="submit" value="Сохранить").modal-send
+					.modal-link Отмена
+			// profile === end
+
+			// bonus
+			.modal.modal--lg(data-modal="bonus")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Личные данные
+					.modal-text.type--mark.type--bold 1 бонусный балл = 1 рубль
+					.modal-bonus.text.scroll
+						p Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.
+
+						p Бонусные баллы не начисляются на акционные товары.
+						h3 Что это значит?
+
+						p Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+						h3 На что можно потратить баллы?
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+			// bonus === end
+
+			// profile
+			.modal(data-modal="address")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Адрес доставки
+					.modal-text Добавленный адрес помогает заполнять форму оформления заказа быстрее
+					.input-row
+						input(type="text" name="name" placeholder="Название адреса (дом, работа)" ).input
+					.input-row
+						input(type="text" name="name" placeholder="Имя").input
+					.input-row
+						input(type="text" name="name" placeholder="E-mail").input
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" name="name" placeholder="Дом").input
+						.input-row
+							input(type="text" name="name" placeholder="№ кв, офис").input
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" name="name" placeholder="Подъезд").input
+						.input-row
+							input(type="text" name="name" placeholder="Этаж").input
+					.input-cont.input-cont--two
+						.input-row.input-row--middle
+							.check-el
+								label.style-label
+									input(type="checkbox").style-input
+									.style-input-element.style-label--checkbox.js-switch(data-item="intercomMob" data-group="admissionMob")
+										+icon("checked","icon-check")
+									.style-input-text Есть домофон
+						.input-row.js-switch-cont.hidden(data-item="intercomMob" data-group="admissionMob")
+							input(type="text" placeholder="Домофон" class="input")
+					input(type="submit" value="Сохранить адрес").modal-send
+					.modal-link Отмена
+			// profile === end
+
+
 			.modal(data-modal="order")
 				.modal-content
 					.modal-close
@@ -18,13 +232,15 @@ mixin modal()
 						.agree-row
 							.check-el
 								label.style-label.style-label--checkbox
-									input(type="checkbox" name="agree").sytle-input
-									.sytle-input-element
+									input(type="checkbox" name="agree").style-input
+									.style-input-element
 										+icon("checked","icon-check")
-									.sytle-input-text=text
+									.style-input-text=text
 							.agree-row__text Согласен с
 								a(href="#") условиями обработки персональных данных
 						input(type="submit" value="Отправить заявку").modal-send
+
+
 			//success message
 			.modal(data-modal="true")
 				.modal-content.modal-content--true
@@ -33,5 +249,5 @@ mixin modal()
 					+icon("check-round","icon icon-msg")
 					.modal-text-true Сообщение отправленно
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
+
 
