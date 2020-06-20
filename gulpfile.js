@@ -97,11 +97,15 @@ gulp.task('svg', function () {
 				.pipe(gulp.dest('dist/img/'))
 
 		var  svgArray =[];
-		fs.writeFile("app/html/block_html/_svg.pug",'');
+		fs.writeFile("app/html/block_html/_svg.pug",'',function(err, result) {
+     if(err) console.log('error', err);
+   	});
 		fs.readdirSync('app/img/svg').forEach(file => {
 			svgArray.push("\'"+file+"\'");
 		})
-		fs.writeFile("app/html/block_html/_svg.pug",'- svgArray = ['+ svgArray+'];');
+		fs.writeFile("app/html/block_html/_svg.pug",'- svgArray = ['+ svgArray+'];','',function(err, result) {
+     if(err) console.log('error', err);
+   	});
 });
 
 
@@ -384,9 +388,9 @@ gulp.task('build:ftp',function(){
 				'copy:css',
 				'min:css',
 				'min:js',
-				'screenshot',
+				//'screenshot',
 				'img',
-				//'svg',
+				'svg',
 				'make',
 				//'zip',
 				//'guide',

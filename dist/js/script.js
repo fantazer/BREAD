@@ -59,12 +59,15 @@ $(document).ready(function () {
 
 
 	// template scroll
-	$(".scroll").niceScroll({
-		autohidemode: false,
-		cursorcolor: "#dcdcdc",
-		scrollspeed: 160, // scrolling speed
-		mousescrollstep: 10,
-	});
+	var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+	if(!isMac) {
+		$(".scroll").niceScroll({
+			autohidemode: false,
+			cursorcolor: "#dcdcdc",
+			scrollspeed: 160, // scrolling speed
+			mousescrollstep: 10,
+		});
+	}
 	// template scroll === end
 
 	//increment field
