@@ -74,25 +74,7 @@ include block_html/_include.pug
 									.icon-block.icon-block--empty
 										+icon("plus","icon")
 									span добавить адрес
-						// Выбор адреса из лк === end
-						.form-block
-							.title--lg Время доставки
-							.input-cont.input-cont--two
-								.input-row
-									.size.size--fluid.size--column
-										.size__el.size__el--active.js-switch(data-group="deliverTime") Как можно раньше
-										.size__el.js-switch(data-item="toTime" data-group="deliverTime") Ко времени
-								.input-row.js-switch-cont.hidden(data-item="toTime" data-group="deliverTime")
-									.col-2
-										select.select-beauty
-											option Cегодня
-											option Завтра
-											- for (var i=0;i<20;i++)
-												option 10.11
-										select.select-beauty
-											option 12:00
-											option 13:00
-											option 14:00
+
 
 
 					.js-switch-cont.hidden(data-item="self" data-group="deliverType")
@@ -109,6 +91,26 @@ include block_html/_include.pug
 									.direction-el__title ул. Новочерскасская, корп. 2
 									.direction-el__text ежедневно с 9 до 21
 						// Выбор адреса из лк === end
+
+					// Выбор адреса из лк === end
+					.form-block
+						.title--lg Время
+						.input-cont.input-cont--two
+							.input-row
+								.size.size--fluid.size--column
+									.size__el.size__el--active.js-switch(data-group="deliverTime") Как можно раньше
+									.size__el.js-switch(data-item="toTime" data-group="deliverTime") Ко времени
+							.input-row.js-switch-cont.hidden(data-item="toTime" data-group="deliverTime")
+								.col-2
+									select.select-beauty
+										option Cегодня
+										option Завтра
+										- for (var i=0;i<20;i++)
+											option 10.11
+									select.select-beauty
+										option 12:00
+										option 13:00
+										option 14:00
 
 					// choose payment type
 					.form-block
@@ -156,12 +158,10 @@ include block_html/_include.pug
 					.title--lg Мой заказ
 
 
-					//.input-row.input-row--error
 					.input-row
 						.input-get
 							input(type="text" placeholder="Ввести промокод" class="input")
 							.input-get__btn Принять
-						//.error-msg Ошибка в данных
 
 					.goods-list
 						- for (var i=0;i<4;i++)
