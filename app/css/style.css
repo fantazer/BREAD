@@ -2715,6 +2715,7 @@ body {
   background-position: center center;
   background-size: cover;
   padding: 50% 10%;
+  border-radius: 20px;
 }
 .product__title {
   margin-bottom: 20px;
@@ -5581,7 +5582,6 @@ select.select-beauty {
   -webkit-transition: -webkit-transform 0.6s, opacity 0.8s;
           transition: transform 0.6s, opacity 0.8s;
   max-width: 420px;
-  z-index: -1;
   left: -9999px;
 }
 @media only screen and (max-width: 768px) {
