@@ -2714,7 +2714,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 50% 10%;
+  padding: 33% 10%;
   border-radius: 20px;
 }
 .product__title {
@@ -5919,14 +5919,14 @@ select.select-beauty {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 20% 10%;
+  padding: 15% 10%;
   position: relative;
   border-radius: 20px;
 }
 @media only screen and (max-width: 640px) {
   .item-mobile__img {
     width: 100%;
-    padding: 50% 10%;
+    padding: 33% 10%;
   }
 }
 .item-mobile__img .product-el--add {
