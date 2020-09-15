@@ -267,6 +267,40 @@ $(document).ready(function () {
 		 }
 	});
 
+	//bubble
+	var limit = 2400 * 3600 * 1000; // 24 часа
+	var localStorageInitTime = localStorage.getItem('localStorageInitTime');
+	//console.log(localStorageInitTime);
+	//console.log(+new Date() - localStorageInitTime);
+	if (localStorageInitTime === null) {
+			localStorage.setItem('localStorageInitTime', +new Date());
+	} else if(+new Date() - localStorageInitTime > limit){
+			localStorage.setItem('localStorageInitTime', +new Date());
+			localStorage.setItem('bubble', '1');
+	};
+
+	if(localStorage.getItem('bubble')!='0'){
+		setTimeout(function(){
+			$('.cookie').addClass('cookie--active');
+			//console.log('111');
+		},3000);
+	}
+
+	$('.cookie .icon-close').click(function(){
+		$(this).closest('.cookie').removeClass('cookie--active');
+		localStorage.setItem('bubble', '0');
+	});
+	//bubble===end
+
+	// clip text
+	$(".product__text").dotdotdot({
+			ellipsis: "...",
+			wrap: "word",
+			height: 75,
+	});
+	// clip text === end
+
+
 	window.condition = {};
 	window.condition.openModal = openModal;
 	window.condition.closeModal = closeModal;
