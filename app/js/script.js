@@ -286,7 +286,7 @@ $(document).ready(function () {
 		},3000);
 	}
 
-	$('.cookie .icon-close').click(function(){
+	$('.cookie .icon').click(function(){
 		$(this).closest('.cookie').removeClass('cookie--active');
 		localStorage.setItem('bubble', '0');
 	});
