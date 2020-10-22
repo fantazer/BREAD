@@ -1,0 +1,16 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.content--mid
+		//product-cont
+		.payment-true
+			.payment-true__img
+				img(src="img/cake.svg", alt="")
+			.payment-true__title Благодарим вас за заказ!
+			.payment-true__text Ваш заказ #[span.type--bold №9854]&nbsp;будет приготовлен и доставлен к вам в течение #[span.type--bold 40 минут]
+			input(type="submit" value="С нетерпением жду!").btn--md.btn--mark.btn--full
+	+footer()
+
+include ./block_html/_script.pug

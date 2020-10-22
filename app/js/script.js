@@ -248,7 +248,7 @@ $(document).ready(function () {
 		$('.modal-filter').height(modalHeightCont);
 
 	};
-
+	
 	$('.modal-get').click(function () {
 		var currentModal = $(this).data("modal");
 		initModal(currentModal);
@@ -256,6 +256,10 @@ $(document).ready(function () {
 
 	$('.modal-close, .modal-hide').click(function () {
 		closeModal();
+	});
+	
+	$('.modal-wrap').click(function(e){
+		e.target.className === 'modal-wrap' ? closeModal() : false
 	});
 	//modals===end
 
@@ -300,6 +304,14 @@ $(document).ready(function () {
 	});
 	// clip text === end
 
+
+	$('.item-mobile .item-add').click(function(){
+		var parrent = $(this).closest('.item-mobile')
+		parrent.find('.product-el--add').removeClass('shake')
+		setTimeout(function () {
+				parrent.find('.product-el--add').addClass('shake');
+			}, 100)
+	});
 
 	window.condition = {};
 	window.condition.openModal = openModal;
