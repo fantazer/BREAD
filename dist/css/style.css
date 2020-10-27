@@ -387,7 +387,6 @@ h4,
 .total-get,
 .order__name-text,
 .direction-el__title,
-.deliver-type__val,
 .page-error__text,
 .page-error__get,
 .modal-send,
@@ -430,7 +429,6 @@ h4,
   .total-get,
   .order__name-text,
   .direction-el__title,
-  .deliver-type__val,
   .page-error__text,
   .page-error__get,
   .modal-send,
@@ -5444,7 +5442,7 @@ select.select-beauty {
   background: #eee;
 }
 .deliver-info {
-  width: 350px;
+  width: 380px;
 }
 @media only screen and (max-width: 740px) {
   .deliver-info {
@@ -5492,7 +5490,8 @@ select.select-beauty {
   margin-right: 20px;
 }
 .deliver-type__val {
-  width: 130px;
+  font-size: 16px;
+  width: 170px;
 }
 @media only screen and (max-width: 640px) {
   .deliver-type__val {
