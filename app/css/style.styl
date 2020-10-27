@@ -1961,7 +1961,7 @@ body
 		justify-content center
 	f()
 	align-items center
-
+	width: 55%
 .order__el
 	+below(640px)
 		fw()
@@ -1991,6 +1991,8 @@ body
 	margin-bottom: 5px
 	display block*/
 
+.order__name
+	width calc(100% - 90px)
 .order__name-text
 	+below(640px)
 			font-size: 20px
@@ -2015,15 +2017,16 @@ body
 		fl()
 	f()
 	align-items center
-	width: 45%
-
+	width: 40%
+	.incr
+		width: 120px
 .order__inc
 	+below(640px)
 		.incr
 			width: auto
 
 .order__price
-	+below(768px)
+	+below(640px)
 		margin: 20px 0
 		font-size: 20px
 		margin-right:initial
@@ -2031,13 +2034,12 @@ body
 	font-weight 700
 	@extend .type--lg
 	white-space nowrap
-	margin-right: 20px
+	margin: 0 20px 0 auto
 .order__delete
 	+below(640px)
 		position absolute
 		top 0
 		right: 0
-	margin-left: auto
 	.icon
 		cp()
 		tr(all)
