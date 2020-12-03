@@ -2849,3 +2849,27 @@ select.select-beauty
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
 	perspective: 1000px;
+
+
+.seo-text
+	color gray
+	max-width 768px
+	p
+		font-size: 12px
+
+.toggle-seo
+	cp()
+	.icon
+		tr()
+	.type--true
+		display none
+.toggle-seo.active
+	span
+		color $mark
+	.icon
+		tr()
+		transform rotate(180deg)
+	.type--true
+		display block
+	.type--false
+		display none

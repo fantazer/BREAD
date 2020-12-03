@@ -313,6 +313,28 @@ $(document).ready(function () {
 			}, 100)
 	});
 
+	//toggle class + neighbor
+	$('.js-commutator-el').click(function(){
+		var thisItem = $(this).data("item");
+		var thisGroup = $(this).data("group") || false;
+		var isEach = $(this).data("each") || false;
+		var selector;
+		$(this).toggleClass("active")
+		if($('.js-commutator-cont').data('group')) {
+			selector = $(".js-commutator-cont[data-group=" + thisGroup + "");
+		}else{
+			selector = $(".js-commutator-cont");
+		}
+		selector.each(function(){
+			if($(this).data("item")=== thisItem){
+				$(this).toggleClass('active');
+			}else{
+				isEach ? $(this).removeClass("active") : false
+			}
+		})
+	})
+	//toggle class + neighbor === end
+
 	window.condition = {};
 	window.condition.openModal = openModal;
 	window.condition.closeModal = closeModal;
